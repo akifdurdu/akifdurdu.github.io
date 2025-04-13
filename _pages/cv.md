@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+---
+
 ## Education
 
 - **Ph.D. in Electrical and Electronics Engineering**  
@@ -225,8 +227,9 @@ redirect_from:
 - Nevzat Bol, *Prediction of Process Parameters in Additive Manufacturing using AI Methods*, 2023  
 - Zülal H. Y. Budak, *Adaptive Traffic Signal Control for Multiple Intersections*, 2024  
 
+---
 
-Skills
+## Skills
 ======
 * Skill 1
 * Skill 2
@@ -235,6 +238,6 @@ Skills
   * Sub-skill 2.3
 * Skill 3
 
-Service and leadership
+## Service and leadership
 ======
 * Currently signed in to 43 different slack teams
