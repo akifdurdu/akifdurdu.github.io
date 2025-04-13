@@ -22,14 +22,14 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "me.png"
-  name             : "Akif DURDU"
+  avatar           : "profile.png"
+  name             : "Your Sidebar Name"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
-  employer         : "Konya Technical University"
+  employer         : "Red Brick University"
   uri              : # URL
-  email            : "adurdu@ktun.edu.tr" 
+  email            : "none@example.org" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
