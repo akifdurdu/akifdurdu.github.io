@@ -152,9 +152,11 @@ redirect_from:
 - IAENG (International Association of Engineers)
 - Turkish EMO (Chamber of Electrical Engineers)
 
-### Teaching Experience
+---
 
-#### Selcuk University
+## Teaching Experience
+
+### Selcuk University
 
 **Graduate/Undergraduate Courses:**
 - *Automatic Control 1:* Fa’13, Fa’14, Fa’15, Fa’16, Fa’17, Fa’18  
@@ -166,7 +168,7 @@ redirect_from:
 - *Tele Robots:* Fa’18  
 - *Robotic Vision:* Fa’18  
 
-#### Konya Technical University
+### Konya Technical University
 
 **Graduate/Undergraduate Courses:**
 - *Automatic Control 1:* Fa’19, Fa’21, Fa’22, Fa’23, Fa’24  
@@ -177,16 +179,16 @@ redirect_from:
 - *Tele Robots:* Sp’22, Sp’23  
 - *Robotic Vision:* Sp’22, Sp’23  
 
-#### KTO Karatay University
+### KTO Karatay University
 
 **Graduate/Undergraduate Courses:**
 - *Control Engineering:* Fa’14, Fa’15, Fa’16, Fa’17  
 
 ---
 
-### Student Supervision
+## Student Supervision
 
-#### Selcuk University
+### Selcuk University
 
 **Ph.D. Students:**
 - Burak Yılmaz, *Multiple Sclerosis Detection in MRI*, 2017  
@@ -201,7 +203,7 @@ redirect_from:
 - Taha A. Mahmood, *Adaptive Traffic Signal Control for Smart Cities*, 2019  
 - Elaf J. D. Dhulkefl, *Shortest Path Planning in 3D Environments*, 2019  
 
-#### Konya Technical University
+### Konya Technical University
 
 **Ph.D. Students:**
 - Mehmet Korkmaz, *Investigation of SLAM & VSLAM Algorithms, Development of a Multi-Robot Map Merging Method*, 2019  
