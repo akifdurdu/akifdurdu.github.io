@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D Ph.D. Electrical and Electronics Engineering, 2012, Middle East Technical University, Turkiye 
+* Ph.D Ph.D. Electrical and Electronics Engineering, 2012, Middle East Technical University, Turkiye
 Thesis: Robotic System Design for Reshaping Estimated Human Intention in Human-Robot Interaction. 
 * B.S. Electrical and Electronics Engineering, 2001, Selcuk University, Turkiye
 
