@@ -38,24 +38,29 @@ Research experience
 * Nov 2001 – Sep 2002: Research and Teaching Assistant
   * Selcuk University, Department of Electrical and Electronics Engineering
   * Location: Konya, Türkiye
- 
-Work experience
+
+Industrial experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* May 2020 – Present: R&D Center Consultant
+  * Elfatek Electronics
+  * Address: Fevzi Çakmak Mahallesi, Modesa Sanayi Sitesi, 10735 Sk. No:10, 42050 Selçuklu, Konya, Türkiye
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* May 2021 – Present: R&D Center Consultant
+  * MPG (Makine Prodüksiyon Grubu)
+  * Address: Büyükkayacık OSB Mah., Evrenköy Cad., No:14/1, Selçuklu, Konya, Türkiye
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+* May 2015 – Present: R&D Center Consultant
+  * MOSAŞ Group
+  * Address: Büyükkayacık OSB Mah., 422. Sk., No:13, 42160 Selçuklu, Konya, Türkiye
+
+* June 2023 – Present: Official Consultant
+  * Agrovisio
+  * Address: Ostim 1308. Sokak, ODTÜ Teknokent, No:6, 06370 Yenimahalle, Ankara, Türkiye
+
+* October 2024 – Present: Design Center Consultant
+  * Önallar Agricultural Machinery
+  * Address: Konya Organize Sanayi Bölgesi, Evrenköy Cd., 3. Nolu Sk., No:4, Selçuklu, Konya, Türkiye
+ 
 Skills
 ======
 * Skill 1
