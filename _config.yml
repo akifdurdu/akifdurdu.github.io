@@ -11,9 +11,9 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Akif DURDU"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://akifdurdu.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+name                     : &name "Akif DURDU"
+description              : &description "Associate Professor at Konya Technical University"
+url                      : https://akifdurdu.github.io 
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dakif/akifdurdu.github.io"
 
