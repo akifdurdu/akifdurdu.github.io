@@ -230,7 +230,7 @@ redirect_from:
 ---
 
 ## Skills
-======
+
 * Skill 1
 * Skill 2
   * Sub-skill 2.1
@@ -238,6 +238,54 @@ redirect_from:
   * Sub-skill 2.3
 * Skill 3
 
-## Service and leadership
-======
-* Currently signed in to 43 different slack teams
+---
+
+## Professional Service & Activities
+
+**Organizing Committees:**
+- **General Co-Chair**, 25th Automatic Control National Conference (TOK 2024), Konya Technical University, Konya, Turkey, Sept. 2024
+
+**Program Committee Member:**
+- 8th EAI International Conference on Robotic Sensor Networks (ROSENET 2024), Istanbul, Turkey, Dec. 19-20, 2024
+
+**Session Chair:**
+- 23rd Automatic Control National Conference (TOK 2022), Firat University, Elazig, Turkey, Sept. 2022
+
+---
+
+## Awards, Honors and Recognition
+
+- **University Entrepreneurship Club Award**, 10th GİV Entrepreneurship Awards, 2024
+- **Recipient of TÜBİTAK 2214 International Research Fellowship Programme for PhD Students**, 2011
+- **Recipient of TÜBİTAK 2219 International Postdoctoral Research Fellowship Program for Turkish Citizens**, 2019
+- **Recipient of TÜBİTAK 2224-A Grant Program for Participation in Scientific Meetings Abroad**, 2014, 2019, 2023
+- **Best Presentation Award**, International Conference on Artificial Intelligence (ICOAI), 2014
+- **Certificate of Merit (Student)**, International Conference on Intelligent Automation and Robotics (ICIAR), 2011
+
+**Advisor for award-winning student teams in national and international competitions:**
+
+- **Yıldız Wars Free Category Third Place** (2016): "Helpful Shopping Robot" by M. Fatih Arslan and M. Mustafa Kelek  
+- **13th METU Robotics Days Free Category Third Place and Jury Special Award** (2016): "Mine Searching Robot with Sun Tracking Mechanism" by B. Özşen  
+- **TÜBİTAK UAV Competition Rotary Wing Category Second Place** (2017): S-Air Team  
+- **15th METU Robotics Days Innovation Category Second Place** (2018): "Active Security Robot" by M. Şen, M. İlker Ekmen, and M. Ali Baygın Teknofest'18  
+- **TÜBİTAK UAV Competition Rotary Wing Category Second and Third Places** (2018): S-Quad and S-Air Teams  
+- **16th METU Robotics Days Innovation Category Second Place** (2019): "Autonomous Cleaning Robot" by M. Duramaz, E. Öztürk, and M. Aslantaş  
+- **OpenZeka Mini Autonomous Vehicle Competition University Category Championship** (2019)  
+- **Teknofest'19 TÜBİTAK UAV Competition Rotary Wing Category Championship** (2019): RACLAB Aybars Team 17th  
+- **METU Robotics Days "Autonomous UAV-Image Processing" Category Championship** (2020): RACLAB Tugberk Team  
+- **Teknofest'20 Intelligent Transportation Competition Third Place** (2020): RACLAB Intelligent Transportation Team  
+- **TÜBİTAK 2242 University Research Project Competition "Social Innovation and Entrepreneurship" Encouragement Award** (2021): "AI-Supported Smart Cleaning Robot"  
+- **Teknofest'21 Intelligent Transportation Competition Second Place** (2021): RACLAB Intelligent Transportation Team  
+- **Teknofest'21 Robotaxi Competition Ready Vehicle Category "Most Original Software" Award** (2021): RACLAB SİGUN Team  
+- **18th METU Robotics Days "Autonomous UAV-Image Processing" Category Third Place** (2022): RACLAB Aybars Team  
+- **18th METU Robotics Days Innovation Category Honorable Mention** (2022): RACLAB Aspar Team  
+- **Teknofest'22 Robotaxi Competition Ready Vehicle Category "Most Original Software" Award and Performance First Place** (2022): RACLAB SİGUN Team  
+- **Teknofest'22 Swarm UAV Competition "Best Team Spirit" Award** (2022)  
+- **Teknofest'22 TÜBİTAK 2242 University Research Project Competition "Defense, Space, and Aviation" Second Place** (2022): "Underwater Vehicle Control Board Communicating with Computers"  
+- **Teknofest'22 Intelligent Transportation Competition Fourth Place** (2022)  
+- **Teknofest'23 Agricultural UAV Competition "Most Original Design" Award** (2023)  
+- **Teknofest'23 TÜBİTAK International UAV Competition Rotary Wing and Fixed Wing Categories "Performance Awards"** (2023): RACLAB UAV and RACLAB MERKÜT UAV Teams  
+- **Teknofest'23 Robotaxi Competition Ready Vehicle Category Performance Third Place** (2023): RACLAB SİGUN Team  
+- **Teknofest'24 Robotaxi Competition Ready Vehicle Category Performance Second Place** (2024): RACLAB SİGUN Team
+
+---
