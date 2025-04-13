@@ -17,31 +17,24 @@ Thesis: Robotic System Design for Reshaping Estimated Human Intention in Human-R
 
 Research experience
 ======
-
 * May 2020 – Present: Assoc. Prof. Dr.
   * Konya Technical University, Department of Electrical and Electronics Engineering (Faculty of Engineering and Natural Sciences)
   * Location: Konya, Türkiye
-
 * July 2019 – July 2020: Visiting Postdoctoral Researcher
   * Ohio State University, Photogrammetric Computer Vision Lab (PCVLab)
   * Location: Ohio, United States
-
 * May 2018 – May 2020: Assist. Prof. Dr.
   * Konya Technical University, Department of Electrical and Electronics Engineering (Faculty of Engineering and Natural Sciences)
   * Location: Konya, Türkiye
-
 * Feb 2013 – May 2018: Assist. Prof. Dr.
   * Selcuk University, Department of Electrical and Electronics Engineering (Faculty of Engineering)
   * Location: Konya, Türkiye
-
 * Jan 2011 – Jan 2012: Visiting Scholar Researcher
   * Ohio State University, Photogrammetric Computer Vision Lab (PCVLab)
   * Location: Ohio, United States
-
 * Sep 2002 – Feb 2013: Research and Teaching Assistant
   * Middle East Technical University, Department of Electrical and Electronics Engineering
   * Location: Ankara, Türkiye
-
 * Nov 2001 – Sep 2002: Research and Teaching Assistant
   * Selcuk University, Department of Electrical and Electronics Engineering
   * Location: Konya, Türkiye
