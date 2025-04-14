@@ -37,7 +37,7 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0002-5611-2322"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/.."
+  pubmed           : # URL
   researchgate     : "https://www.researchgate.net/profile/Akif-Durdu"
   scopus           : "https://www.scopus.com/authid/detail.uri?authorId=55364612200"
 
@@ -45,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "dakif"
+  github           : "akifdurdu"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
