@@ -9,56 +9,56 @@ author_profile: true
 <section id="news">
   <!-- 13 Jun 2024 ---------------------------------------------------->
 <style>
-  .fixed-img {
-    width: 300px;          /* istediğiniz genişlik */
-    height: 200px;         /* istediğiniz yükseklik */
-    object-fit: cover;     /* oran koru, taşanı kırp */
-    border-radius: 8px;    /* köşeleri yumuşat (isteğe bağlı) */
-    box-shadow: 0 2px 8px rgba(0,0,0,.15);
-  }
-  /* küçük resim */
-  .thumb        { width:300px; height:200px; object-fit:cover; cursor:pointer;
-                  border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.15); }
-
-  /* üst katman (başta gizli) */
-  .lightbox     { display:none; position:fixed; inset:0;
-                  background:rgba(0,0,0,.85); place-content:center;
-                  overflow:auto;            /* büyük resim taşarsa kaydır */
-                  z-index:1000;  }
-  .lightbox img { width:auto; height:auto;  /* ORİJİNAL EBAT */
-                  max-width:none; max-height:none; }
-
-  .lightbox:target { display:grid; }        /* #id eşleştiğinde görünür */
-
-  /* kapatma butonu */
-  .close        { position:absolute; top:1rem; right:1.3rem;
-                  font:2.3rem/1 monospace; color:#fff; text-decoration:none; }
+/* thumbnail */
+.news-thumb img{
+  display:block;       /* remove inline-gap */
+  max-width:260px;     /* thumbnail size on the page  */
+  height:auto;
+  border-radius:4px;
+  cursor:pointer;
+}
+/* full-screen overlay */
+.lightbox{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.85);
+  opacity:0;           /* stay hidden until targeted */
+  pointer-events:none;
+  transition:opacity .25s ease;
+  z-index:9999;
+}
+.lightbox img{
+  position:absolute;          /* centre the big picture */
+  top:50%; left:50%;
+  max-width:90%; max-height:90%;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 10px #fff;
+}
+.lightbox:target{opacity:1; pointer-events:auto;}
+.lightbox .close{
+  position:absolute; top:14px; right:24px;
+  font:32px/1 monospace; color:#fff; text-decoration:none;
+}
 </style>
 
   
 <article class="news-item">
   <h3 class="news-date">13 June 2024</h3>
 
-  <!-- küçük resim -->
-  <figure class="news-gallery">
-    <a href="#img-1718305651924">        <!-- benzersiz ID -->
-      <img src="https://raclabblog.wordpress.com/wp-content/uploads/2025/01/1718305651924.jpeg"
-           alt="Dr. Berat Yıldız thesis defence"
-           class="thumb">
-    </a>
-  </figure>
+  <!-- Thumbnail the visitor clicks -->
+  <a href="#img-1718305651924" class="news-thumb">
+    <img src="https://raclabblog.wordpress.com/wp-content/uploads/2025/01/1718305651924.jpeg?w=360"
+         alt="Dr Berat Yıldız – thumbnail">
+  </a>
 
-  <p>Dr. Berat Yıldız successfully defended his Ph.D. thesis on
-     “<em>Intelligent Path Planning for Unmanned Aerial Vehicle (UAV) Swarms</em>”.
-     Congratulations on this impressive achievement! 🎉
-  </p>
-
-  <!-- tam boy resim (light-box) -->
-  <figure id="img-1718305651924" class="lightbox">
-    <a href="#" class="close" aria-label="close">×</a>
+  <!-- Hidden full-size picture (the “lightbox”) -->
+  <div id="img-1718305651924" class="lightbox">
+    <a class="close" href="#">×</a>
     <img src="https://raclabblog.wordpress.com/wp-content/uploads/2025/01/1718305651924.jpeg"
-         alt="Dr. Berat Yıldız thesis defence – full size">
-  </figure>
+         alt="Dr Berat Yıldız – full size">
+  </div>
+
+  <p>Dr Berat Yıldız successfully defended his Ph.D. thesis on
+     “<em>Intelligent Path Planning for UAV Swarms</em>”. Congratulations! 🎉</p>
 </article>
 
   <!-- 20 Mar 2024 ---------------------------------------------------->
@@ -69,7 +69,7 @@ author_profile: true
     <figure class="news-gallery">
       <img src="https://raclabblog.wordpress.com/wp-content/uploads/2025/01/abdullah1.jpeg"
            alt="Dr. Abdullah Yusefi thesis defence"
-          class="fixed-img">
+          class="news-thumb">
     </figure>
   </article>
 
