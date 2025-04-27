@@ -41,21 +41,23 @@ author_profile: true
     display:flex;          /* yan yana diz */
     flex-wrap:wrap;        /* genişlik yetmezse alt satıra in */
     gap:1rem;              /* kareler arası boşluk */
+    justify-content:center; /* her satırı ortala   */
     margin:1.5rem 0;
   }
   .gallery a{
-    flex:1 0 220px;        /* her kare min 220 px genişlik */
+    flex:0 0 240px;        /* sabit kutu genişliği  */
     text-decoration:none;
   }
   .gallery img{
-    width:100%;            /* hücrenin tamamını kapla */
-    height:auto;
+    /* width:100%;             hücrenin tamamını kapla */
+    width:240px; height:160px;       /* sabit boyut           */
+    /* height:auto; */
     border-radius:8px;
     box-shadow:0 2px 6px rgba(0,0,0,.15);
+    display:block;
   }
 </style>
-
-  
+ 
 <article class="news-item">
   <h3 class="news-date">13 June 2024</h3>
 
