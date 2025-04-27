@@ -37,6 +37,22 @@ author_profile: true
   position:absolute; top:14px; right:24px;
   font:32px/1 monospace; color:#fff; text-decoration:none;
 }
+.gallery{
+    display:flex;          /* yan yana diz */
+    flex-wrap:wrap;        /* genişlik yetmezse alt satıra in */
+    gap:1rem;              /* kareler arası boşluk */
+    margin:1.5rem 0;
+  }
+  .gallery a{
+    flex:1 0 220px;        /* her kare min 220 px genişlik */
+    text-decoration:none;
+  }
+  .gallery img{
+    width:100%;            /* hücrenin tamamını kapla */
+    height:auto;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
 </style>
 
   
@@ -421,12 +437,14 @@ author_profile: true
 <article class="news-item">
   <h3 class="news-date">22–24 December 2014</h3>
   <p>Oral presentation of <strong>Akif Durdu</strong>&nbsp;was&nbsp;selected as the best one in <a href="http://icoai.org/">the conference of ICOAI 2014</a>.</p>
+  <div class="gallery">
   <a href="https://lh3.googleusercontent.com/d/1W3q5dd-R8uxkxyDSFaroBg_YFDDnex1D=w1600" class="news-thumb" target="_blank" rel="noopener"> 
       <img src="https://lh3.googleusercontent.com/d/1W3q5dd-R8uxkxyDSFaroBg_YFDDnex1D=w1600"
            alt="Akif Durdu Ödül"> </a>
     <a href="https://lh3.googleusercontent.com/d/1rYE0nevKu7cXiT-_ROugaEmF2QWjKMqv=w1600" class="news-thumb" target="_blank" rel="noopener"> 
       <img src="https://lh3.googleusercontent.com/d/1rYE0nevKu7cXiT-_ROugaEmF2QWjKMqv=w1600"
            alt="Akif Durdu Ödül"> </a>
+  </div>
 </article>
 
 </section>
