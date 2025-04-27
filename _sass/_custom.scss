@@ -1,0 +1,6 @@
+.thumb{max-width:260px;height:auto;cursor:pointer;border-radius:4px;object-fit:cover}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);
+          place-content:center;overflow:auto;z-index:9999}
+.lightbox img{max-width:90%;max-height:90%;box-shadow:0 0 10px #fff}
+.lightbox:target{display:grid}
+.close{position:absolute;top:14px;right:24px;font:32px/1 monospace;color:#fff;text-decoration:none}
