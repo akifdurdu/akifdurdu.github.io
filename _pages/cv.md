@@ -70,11 +70,6 @@ redirect_from:
   *Elfatek Electronics*  
   *Fevzi Çakmak Mahallesi, Modesa Sanayi Sitesi, 10735 Sk. No:10, 42050 Selçuklu, Konya, Turkey*
 
-- **May 2021 – Present**  
-  **R&D Center Consultant**  
-  *MPG (Makine Prodüksiyon Grubu)*  
-  *Büyükkayacık OSB Mah., Evrenköy Cad., No:14/1, Selçuklu, Konya, Turkey*
-
 - **May 2015 – Present**  
   **R&D Center Consultant**  
   *MOSAŞ Group*  
@@ -90,6 +85,10 @@ redirect_from:
   *Önallar Agricultural Machinery*  
   *Konya Organize Sanayi Bölgesi, Evrenköy Cd., 3. Nolu Sk., No:4, Selçuklu, Konya, Turkey*
 
+- **May 2021 – 2025**  
+  **R&D Center Consultant**  
+  *MPG (Makine Prodüksiyon Grubu)*  
+  *Büyükkayacık OSB Mah., Evrenköy Cad., No:14/1, Selçuklu, Konya, Turkey*
 ---
 
 ## Projects
