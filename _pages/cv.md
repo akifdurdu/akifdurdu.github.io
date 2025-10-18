@@ -26,6 +26,11 @@ redirect_from:
 
 ## Research Experience
 
+- **Sept 2025 – Present**  
+  **Prof. Dr.**  
+  *Konya Technical University, Department of Electrical and Electronics Engineering (Faculty of Engineering and Natural Sciences)*  
+  *Konya, Turkey*
+
 - **May 2020 – Present**  
   **Assoc. Prof. Dr.**  
   *Konya Technical University, Department of Electrical and Electronics Engineering (Faculty of Engineering and Natural Sciences)*  
