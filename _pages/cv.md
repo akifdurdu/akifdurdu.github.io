@@ -31,7 +31,7 @@ redirect_from:
   *Konya Technical University, Department of Electrical and Electronics Engineering (Faculty of Engineering and Natural Sciences)*  
   *Konya, Turkey*
 
-- **May 2020 – Present**  
+- **May 2020 – Sept 2025**  
   **Assoc. Prof. Dr.**  
   *Konya Technical University, Department of Electrical and Electronics Engineering (Faculty of Engineering and Natural Sciences)*  
   *Konya, Turkey*
