@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akif Durdu | Konya Technical University</title>
+<meta name="description" content="Akif Durdu, Professor of Electrical and Electronics Engineering at Konya Technical University. Autonomous systems, intelligent transportation, robotics and AI.">
+<meta property="og:title" content="Akif Durdu">
+<meta property="og:description" content="Autonomous systems, intelligent transportation, robotics and AI. Konya Technical University.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Akif Durdu","jobTitle":"Professor","affiliation":{"@type":"CollegeOrUniversity","name":"Konya Technical University"},"email":"akifdurdu@gmail.com","url":"https://akifdurdu.github.io/","sameAs":["https://orcid.org/0000-0002-5611-2322","https://scholar.google.com/citations?user=4wHq7iwAAAAJ","https://www.researchgate.net/profile/Akif-DURDU","https://raclab.org"]}
+</script>
+<style>
+:root{
+  --bg:#F3F5F3; --panel:#E8EDEA; --ink:#16202A; --mute:#55616D; --line:#D2D9D5;
+  --acc:#0B6A8E; --obs:rgba(22,32,42,.08); --edge:rgba(22,32,42,.30);
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F171D;--panel:#16212A;--ink:#E5EBEE;--mute:#93A2AE;--line:#25323C;--acc:#62C3E3;--obs:rgba(229,235,238,.07);--edge:rgba(229,235,238,.26);color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+html[lang="tr"] [data-l="en"],html[lang="en"] [data-l="tr"]{display:none}
+a{color:var(--acc);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+b,strong{font-weight:600}
+p{margin:0 0 1em}
+
+.shell{max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:72px}
+.side{position:sticky;top:0;height:100vh;padding:44px 0 32px;display:flex;flex-direction:column;gap:30px;overflow-y:auto;font-family:var(--sans);font-size:.92rem}
+.brand{font-family:var(--serif);font-size:1.35rem;font-weight:500;line-height:1.2;color:var(--ink);text-decoration:none;letter-spacing:-.005em}
+.brand small{display:block;font-family:var(--sans);font-size:.8rem;font-weight:400;color:var(--mute);margin-top:4px;letter-spacing:0}
+.lang{display:flex;gap:0;border:1px solid var(--line);border-radius:6px;width:max-content;overflow:hidden}
+.lang button{font:inherit;font-size:.85rem;background:none;border:0;color:var(--mute);padding:5px 12px;cursor:pointer}
+.lang button+button{border-left:1px solid var(--line)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.nav a{display:block;padding:5px 0 5px 14px;color:var(--mute);text-decoration:none;border-left:2px solid var(--line)}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);border-left-color:var(--acc);font-weight:500}
+.profiles{margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.profiles a{color:var(--mute);text-decoration:none;display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.profiles a:hover{color:var(--acc)}
+.profiles span:last-child{font-variant-numeric:tabular-nums}
+
+main{padding:64px 0 120px;max-width:800px}
+.hero{display:flex;gap:36px;align-items:flex-start;justify-content:space-between}
+.hero h1{font-weight:500;font-size:clamp(2.9rem,7.2vw,5rem);line-height:1;letter-spacing:-.025em;margin:0 0 20px}
+.hero .role{font-size:1.3rem;line-height:1.4;margin:0 0 18px;max-width:30ch}
+.hero .lede{color:var(--mute);max-width:56ch}
+.portrait{width:150px;height:190px;object-fit:cover;border-radius:4px;flex:none;background:var(--panel)}
+.field{margin:40px 0 0}
+.field canvas{display:block;width:100%;aspect-ratio:16/7.5;background:var(--panel);border:1px solid var(--line);border-radius:4px;cursor:crosshair}
+.field figcaption{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--mute);margin-top:10px}
+.field button{font:inherit;font-size:.84rem;flex:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
+.field button:hover{border-color:var(--acc);color:var(--acc)}
+
+section{padding-top:72px;scroll-margin-top:0}
+h2{font-weight:500;font-size:2rem;letter-spacing:-.015em;line-height:1.15;margin:0 0 22px}
+h3{font-family:var(--sans);font-weight:600;font-size:.98rem;margin:40px 0 4px;color:var(--ink)}
+.row{display:grid;grid-template-columns:138px minmax(0,1fr);gap:2px 28px;padding:14px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.when{font-family:var(--sans);font-size:.88rem;color:var(--mute);font-variant-numeric:tabular-nums;padding-top:3px}
+.what .t{font-size:1.06rem;line-height:1.4}
+.what .m{font-family:var(--sans);font-size:.88rem;color:var(--mute);margin-top:3px;line-height:1.5}
+.what .m a{color:inherit}
+dl.groups{margin:0}
+dl.groups div{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:138px minmax(0,1fr);gap:2px 28px}
+dl.groups div:last-child{border-bottom:1px solid var(--line)}
+dl.groups dt{font-family:var(--sans);font-size:.88rem;color:var(--mute);padding-top:3px}
+dl.groups dd{margin:0}
+.idx{font-family:var(--sans);font-size:.92rem;color:var(--mute);margin-top:22px}
+.idx a{color:var(--ink)}
+
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0 14px;font-family:var(--sans);font-size:.86rem;color:var(--mute)}
+.chip{font:inherit;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:3px 11px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pub{margin:0}
+.pub .au{color:var(--mute)}
+.pub .au b{color:var(--ink)}
+.pub .ti{display:block;font-size:1.04rem;line-height:1.4;margin:1px 0}
+.pub .vn{font-family:var(--sans);font-size:.86rem;color:var(--mute);line-height:1.5}
+.q{display:inline-block;font-family:var(--sans);font-size:.74rem;line-height:1.5;border:1px solid var(--line);border-radius:4px;padding:0 6px;margin-left:6px;color:var(--mute);white-space:nowrap}
+.q.q1{color:var(--acc);border-color:var(--acc)}
+details{margin-top:6px}
+summary{cursor:pointer;font-family:var(--sans);font-size:.9rem;color:var(--acc);padding:10px 0}
+.note{font-family:var(--sans);font-size:.88rem;color:var(--mute)}
+
+@media (max-width:920px){
+  .shell{display:block;padding:0 20px}
+  .side{height:auto;padding:12px 0 0;gap:10px;flex-direction:row;flex-wrap:wrap;align-items:center;background:var(--bg);z-index:10;border-bottom:1px solid var(--line)}
+  .brand{flex:1;font-size:1.15rem}.brand small{display:none}
+  .nav{flex-basis:100%;overflow-x:auto;order:3;margin:0 -20px;padding:0 20px;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav ul{flex-direction:row;gap:18px}
+  .nav a{border-left:0;border-bottom:2px solid transparent;padding:6px 0 8px;white-space:nowrap}
+  .nav a.on{border-bottom-color:var(--acc)}
+  .profiles{display:none}
+  main{padding-top:40px}
+  section{scroll-margin-top:84px;padding-top:56px}
+  .hero{flex-direction:column-reverse;gap:24px}
+  .portrait{width:110px;height:140px}
+}
+@media (max-width:620px){
+  .row,dl.groups div{grid-template-columns:1fr;gap:0}
+  .when{padding-top:0;margin-bottom:2px}
+  .field canvas{aspect-ratio:4/3}
+  h2{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<aside class="side">
+  <a class="brand" href="#top">Akif Durdu<small data-en="Konya Technical University" data-tr="Konya Teknik Üniversitesi"></small></a>
+  <div class="lang" role="group" aria-label="Language / Dil">
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="tr" aria-pressed="false">Türkçe</button>
+  </div>
+  <nav class="nav" aria-label="Sections"><ul id="nav"></ul></nav>
+  <div class="profiles" id="profiles"></div>
+</aside>
+
+<main id="top">
+  <header class="hero">
+    <div>
+      <h1>Akif Durdu</h1>
+      <p class="role" data-en="Professor of Electrical and Electronics Engineering, Konya Technical University" data-tr="Konya Teknik Üniversitesi Elektrik-Elektronik Mühendisliği Profesörü"></p>
+      <p class="lede" data-en="I work on robots, drones and traffic controllers that have to find their own way: planning routes, localizing without GPS, and coordinating many agents at once. A good part of the work is carried out with industry partners in Konya and beyond." data-tr="Kendi yolunu bulmak zorunda olan robotlar, insansız hava araçları ve trafik kontrolcüleri üzerinde çalışıyorum: rota planlama, GPS olmadan konumlama ve çok sayıda aracın eş güdümü. Çalışmaların önemli bir kısmı Konya'daki ve diğer şehirlerdeki sanayi ortaklarıyla yürütülüyor."></p>
+    </div>
+    <img class="portrait" src="photo.jpg" alt="Akif Durdu" onerror="this.remove()">
+  </header>
+
+  <figure class="field">
+    <canvas id="field" role="img" aria-label="Animation of a randomized tree searching for a route between two points around circular obstacles"></canvas>
+    <figcaption>
+      <span data-en="A randomized tree (RRT) searching for a route around obstacles. Planners of this family are studied in our GDRRT* papers on UAV path planning." data-tr="Engellerin etrafından rota arayan rastgele bir ağaç (RRT). Bu ailedeki planlayıcılar, İHA yol planlamasına dair GDRRT* çalışmalarımızda ele alınıyor."></span>
+      <button type="button" id="replan"><span data-en="Plan again" data-tr="Yeniden planla"></span></button>
+    </figcaption>
+  </figure>
+
+  <section id="research">
+    <h2 data-en="Research" data-tr="Araştırma"></h2>
+    <dl class="groups" id="interests"></dl>
+    <p class="idx" id="indices"></p>
+  </section>
+
+  <section id="news">
+    <h2 data-en="News" data-tr="Haberler"></h2>
+    <div id="newslist"></div>
+    <p class="note" style="margin-top:18px"><span data-en="More from the lab at" data-tr="Laboratuvardan diğer haberler:"></span> <a href="https://raclab.org" target="_blank" rel="noopener">raclab.org</a></p>
+  </section>
+
+  <section id="career">
+    <h2 data-en="Career" data-tr="Kariyer"></h2>
+    <div id="academic"></div>
+    <h3 data-en="Education" data-tr="Eğitim"></h3>
+    <div id="education"></div>
+    <h3 data-en="Industry consulting" data-tr="Sanayi danışmanlığı"></h3>
+    <div id="industry"></div>
+  </section>
+
+  <section id="projects">
+    <h2 data-en="Projects" data-tr="Projeler"></h2>
+    <p class="note" data-en="Industry-funded R&amp;D projects, newest first. “Ongoing” means the project was still running when the CV was written." data-tr="Sanayi destekli Ar-Ge projeleri, yeniden eskiye. “Devam ediyor” ifadesi, özgeçmiş hazırlandığında projenin sürdüğünü gösterir."></p>
+    <div id="projlist"></div>
+    <h3 data-en="Academic research project" data-tr="Akademik araştırma projesi"></h3>
+    <div id="resproj"></div>
+    <h3 data-en="Student projects" data-tr="Öğrenci projeleri"></h3>
+    <div id="studproj"></div>
+  </section>
+
+  <section id="publications">
+    <h2 data-en="Publications" data-tr="Yayınlar"></h2>
+    <div class="tools">
+      <span data-en="Journal articles (SCI, SCI-E, ESCI, SSCI)" data-tr="Dergi makaleleri (SCI, SCI-E, ESCI, SSCI)"></span>
+      <button class="chip" data-f="all" aria-pressed="true"><span data-en="All" data-tr="Tümü"></span></button>
+      <button class="chip" data-f="Q1" aria-pressed="false">Q1</button>
+      <button class="chip" data-f="Q2" aria-pressed="false">Q2</button>
+      <button class="chip" data-f="Q34" aria-pressed="false">Q3–Q4</button>
+      <span id="pubcount"></span>
+    </div>
+    <div id="pubs"></div>
+    <h3 data-en="Selected recent conference papers" data-tr="Seçilmiş güncel bildiriler"></h3>
+    <div id="conf"></div>
+    <h3 data-en="Book chapters" data-tr="Kitap bölümleri"></h3>
+    <div id="chapters"></div>
+    <p class="note" style="margin-top:22px" id="morepubs"></p>
+  </section>
+
+  <section id="teaching">
+    <h2 data-en="Teaching and supervision" data-tr="Ders ve danışmanlık"></h2>
+    <h3 style="margin-top:0" data-en="Courses" data-tr="Verilen dersler"></h3>
+    <div id="courses"></div>
+    <h3 data-en="Doctoral students supervised" data-tr="Danışmanlığı yapılan doktora öğrencileri"></h3>
+    <div id="phd"></div>
+    <details>
+      <summary><span data-en="Master’s students with thesis (16)" data-tr="Tezli yüksek lisans öğrencileri (16)"></span></summary>
+      <div id="ms"></div>
+    </details>
+    <p class="note" data-en="Thesis titles are given in English as listed in the CV." data-tr="Tez başlıkları, özgeçmişte yer aldığı şekliyle İngilizce verilmiştir."></p>
+  </section>
+
+  <section id="honors">
+    <h2 data-en="Honors and service" data-tr="Ödüller ve görevler"></h2>
+    <div id="awards"></div>
+    <h3 data-en="Awards won by student teams I advised" data-tr="Danışmanlığını yaptığım öğrenci takımlarının ödülleri"></h3>
+    <div id="comps"></div>
+    <details><summary><span data-en="Earlier results" data-tr="Önceki sonuçlar"></span></summary><div id="comps2"></div></details>
+    <h3 data-en="Professional service" data-tr="Mesleki görevler"></h3>
+    <div id="service"></div>
+    <h3 data-en="Memberships" data-tr="Üyelikler"></h3>
+    <div id="members"></div>
+  </section>
+
+  <section id="contact">
+    <h2 data-en="Contact" data-tr="İletişim"></h2>
+    <div id="contactlist"></div>
+  </section>
+</main>
+</div>
+
+<script>
+/* ---------- helpers ---------- */
+const b=(en,tr)=>`<span data-l="en">${en}</span><span data-l="tr">${tr}</span>`;
+const $=id=>document.getElementById(id);
+const MON={en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],tr:['Oca','Şub','Mar','Nis','May','Haz','Tem','Ağu','Eyl','Eki','Kas','Ara']};
+const dt=(s,l)=>{const [y,m]=s.split('-');return `${MON[l][+m-1]} ${y}`};
+const PRESENT=['present','günümüz'], ONGOING=['ongoing','devam ediyor'];
+const row=(when,t,m)=>`<div class="row"><div class="when">${when}</div><div class="what"><div class="t">${t}</div>${m?`<div class="m">${m}</div>`:''}</div></div>`;
+
+document.querySelectorAll('[data-en]').forEach(el=>{el.innerHTML=b(el.dataset.en,el.dataset.tr);});
+
+/* ---------- navigation & profile links ---------- */
+const NAV=[['research','Research','Araştırma'],['news','News','Haberler'],['career','Career','Kariyer'],['projects','Projects','Projeler'],['publications','Publications','Yayınlar'],['teaching','Teaching','Ders ve danışmanlık'],['honors','Honors','Ödüller'],['contact','Contact','İletişim']];
+$('nav').innerHTML=NAV.map(n=>`<li><a href="#${n[0]}">${b(n[1],n[2])}</a></li>`).join('');
+const PROF=[
+ ['Google Scholar','https://scholar.google.com/citations?user=4wHq7iwAAAAJ&hl=tr&oi=ao','25'],
+ ['ResearchGate','https://www.researchgate.net/profile/Akif-DURDU','24'],
+ ['Scopus','https://www.scopus.com/authid/detail.uri?authorId=55364612200','20'],
+ ['Web of Science','https://www.webofscience.com/wos/author/record/AAQ-4344-2020','18'],
+ ['ORCID','https://orcid.org/0000-0002-5611-2322',''],
+ ['RAC-LAB','https://raclab.org','']
+];
+$('profiles').innerHTML=PROF.map(p=>`<a href="${p[1]}" target="_blank" rel="noopener"><span>${p[0]}</span><span>${p[2]?'h '+p[2]:'↗'}</span></a>`).join('');
+$('indices').innerHTML=b(
+ 'h-index: Google Scholar 25, ResearchGate 24, Scopus 20, Web of Science 18. Scopus Author ID 55364612200; Web of Science ResearcherID AAQ-4344-2020; <a href="https://orcid.org/0000-0002-5611-2322" target="_blank" rel="noopener">ORCID 0000-0002-5611-2322</a>.',
+ 'h-indeks: Google Scholar 25, ResearchGate 24, Scopus 20, Web of Science 18. Scopus Yazar No: 55364612200; Web of Science ResearcherID: AAQ-4344-2020; <a href="https://orcid.org/0000-0002-5611-2322" target="_blank" rel="noopener">ORCID 0000-0002-5611-2322</a>.');
+
+/* ---------- research ---------- */
+const INT=[
+ ['Autonomous systems','Otonom sistemler','UAVs and unmanned ground vehicles; path and motion planning; localization and navigation without GPS; SLAM and visual SLAM; sensor fusion and extended Kalman filtering; swarm systems; ROS; mobile and cognitive robotics.','İHA’lar ve insansız kara araçları; yol ve hareket planlama; GPS’siz konumlama ve seyrüsefer; SLAM ve görsel SLAM; sensör füzyonu ve genişletilmiş Kalman filtresi; sürü sistemleri; ROS; mobil ve bilişsel robotik.'],
+ ['Intelligent transportation','Akıllı ulaşım','Intelligent traffic signal control, decision support and fleet management.','Akıllı trafik sinyal kontrolü, karar destek ve filo yönetimi.'],
+ ['Methods','Yöntemler','Artificial intelligence and deep learning; control theory, intelligent and nonlinear control; image processing; PLC programming; human–robot interaction (the subject of my PhD thesis).','Yapay zekâ ve derin öğrenme; kontrol teorisi, akıllı ve doğrusal olmayan kontrol; görüntü işleme; PLC programlama; insan–robot etkileşimi (doktora tezimin konusu).']
+];
+$('interests').innerHTML=INT.map(i=>`<div><dt>${b(i[0],i[1])}</dt><dd>${b(i[2],i[3])}</dd></div>`).join('');
+
+/* ---------- news ----------
+   Add items at the top. d: "YYYY-MM" or "YYYY"; en/tr: text; link (optional). */
+const NEWS=[
+ {d:'2026-03',en:'A TÜBİTAK 1707 project on an IoT-supported two-way communication and digital twin platform for elevators started with Butkon Lift.',tr:'Butkon Lift ile asansörler için IoT destekli çift yönlü iletişim ve dijital ikiz platformu konulu TÜBİTAK 1707 projesi başladı.'},
+ {d:'2026-02',en:'New paper in Scientific Reports on disturbance-tolerant quadrotor control with a hybrid LQR and super-twisting sliding mode approach.',tr:'Scientific Reports’ta hibrit LQR ve süper bükülmeli kayan kipli kontrol ile bozucu etkilere dayanıklı quadrotor kontrolü üzerine yeni makale yayımlandı.',link:'https://doi.org/10.1038/s41598-026-38820-0'},
+ {d:'2026-01',en:'Joined Link Robotics as technical consultant.',tr:'Link Robotics’te teknik danışman olarak göreve başladım.'},
+ {d:'2025-09',en:'Appointed Professor at Konya Technical University.',tr:'Konya Teknik Üniversitesi’nde profesör kadrosuna atandım.'},
+ {d:'2025',en:'RACLAB NOVA won the championship and the best team spirit award at the Teknofest Unmanned Underwater Systems Competition.',tr:'RACLAB NOVA, Teknofest İnsansız Su Altı Sistemleri Yarışması’nda şampiyonluk ve en iyi takım ruhu ödülünü kazandı.'},
+ {d:'2025',en:'RACLAB SİGUN took second place and the most original software award in the Teknofest Robotaxi ready vehicle category.',tr:'RACLAB SİGUN, Teknofest Robotaksi hazır araç kategorisinde ikincilik ve en özgün yazılım ödülünü aldı.'},
+ {d:'2025',en:'RACLAB TULPAR’S placed third in the free category of the Teknofest TÜBİTAK International UAV Competition.',tr:'RACLAB TULPAR’S, Teknofest TÜBİTAK Uluslararası İHA Yarışması serbest kategorisinde üçüncü oldu.'}
+];
+$('newslist').innerHTML=NEWS.map(n=>{
+  const when=n.d.length>4?b(dt(n.d,'en'),dt(n.d,'tr')):n.d;
+  const lk=n.link?` <a href="${n.link}" target="_blank" rel="noopener">${b('Read','Oku')}</a>`:'';
+  return row(when,b(n.en,n.tr)+lk,'');
+}).join('');
+
+/* ---------- career ---------- */
+const KTU=['Konya Technical University, Electrical and Electronics Engineering','Konya Teknik Üniversitesi, Elektrik-Elektronik Mühendisliği'];
+const ACAD=[
+ [['2025',0],['Professor','Profesör'],KTU],
+ [['2020','2025'],['Associate professor','Doçent'],KTU],
+ [['2019','2020'],['Visiting postdoctoral researcher','Misafir doktora sonrası araştırmacı'],['Ohio State University, Photogrammetric Computer Vision Laboratory (TÜBİTAK 2219 fellowship)','Ohio State University, Fotogrametrik Bilgisayarlı Görü Laboratuvarı (TÜBİTAK 2219 bursu)']],
+ [['2018','2020'],['Assistant professor','Dr. Öğretim Üyesi'],KTU],
+ [['2013','2018'],['Assistant professor','Dr. Öğretim Üyesi'],['Selçuk University, Electrical and Electronics Engineering','Selçuk Üniversitesi, Elektrik-Elektronik Mühendisliği']],
+ [['2011','2012'],['Visiting scholar','Misafir araştırmacı'],['Ohio State University, Photogrammetric Computer Vision Laboratory (TÜBİTAK 2214 fellowship)','Ohio State University, Fotogrametrik Bilgisayarlı Görü Laboratuvarı (TÜBİTAK 2214 bursu)']],
+ [['2002','2013'],['Research and teaching assistant','Araştırma görevlisi'],['Middle East Technical University, Electrical and Electronics Engineering','Orta Doğu Teknik Üniversitesi, Elektrik-Elektronik Mühendisliği']],
+ [['2001','2002'],['Research and teaching assistant','Araştırma görevlisi'],['Selçuk University, Electrical and Electronics Engineering','Selçuk Üniversitesi, Elektrik-Elektronik Mühendisliği']]
+];
+const yrs=w=>w[1]===0?b(`${w[0]} – ${PRESENT[0]}`,`${w[0]} – ${PRESENT[1]}`):`${w[0]} – ${w[1]}`;
+$('academic').innerHTML=ACAD.map(a=>row(yrs(a[0]),b(a[1][0],a[1][1]),b(a[2][0],a[2][1]))).join('');
+$('education').innerHTML=
+ row('2012',b('PhD, Electrical and Electronics Engineering','Doktora, Elektrik-Elektronik Mühendisliği'),b('Middle East Technical University. Thesis: <i>Robotic System Design for Reshaping Estimated Human Intention in Human-Robot Interaction</i>. Advisor: İsmet Erkmen; co-advisor: Aydan M. Erkmen.','Orta Doğu Teknik Üniversitesi. Tez: <i>Robotic System Design for Reshaping Estimated Human Intention in Human-Robot Interaction</i>. Danışman: İsmet Erkmen; eş danışman: Aydan M. Erkmen.'))+
+ row('2001',b('BS, Electrical and Electronics Engineering','Lisans, Elektrik-Elektronik Mühendisliği'),b('Selçuk University','Selçuk Üniversitesi'));
+const IND=[
+ ['2026 – '+PRESENT[0],'2026 – '+PRESENT[1],'Link Robotics',['Technical consultant','Teknik danışman']],
+ ['2025 – '+PRESENT[0],'2025 – '+PRESENT[1],'Butkon Elevator R&amp;D Center',['Consultant','Danışman']],
+ ['2024 – '+PRESENT[0],'2024 – '+PRESENT[1],'Önallar Agricultural Machinery Design Center',['Consultant','Danışman']],
+ ['2023 – 2025','2023 – 2025','Agrovisio',['Official technical consultant','Resmî teknik danışman']],
+ ['2021 – 2025','2021 – 2025','MPG (Makine Prodüksiyon Grubu) R&amp;D Center',['Consultant','Danışman']],
+ ['2020 – '+PRESENT[0],'2020 – '+PRESENT[1],'Elfatek Electronics R&amp;D Center',['Consultant','Danışman']],
+ ['2015 – '+PRESENT[0],'2015 – '+PRESENT[1],'MOSAŞ Group R&amp;D Center',['Consultant','Danışman']]
+];
+$('industry').innerHTML=IND.map(i=>row(b(i[0],i[1]),i[2],b(i[3][0],i[3][1]))).join('');
+
+/* ---------- projects ---------- */
+const span=(a,z)=>b(`${dt(a,'en')} – ${z?dt(z,'en'):PRESENT[0]}`,`${dt(a,'tr')} – ${z?dt(z,'tr'):PRESENT[1]}`);
+const ROLE={adv:['Advisor','Danışman'],coord:['Project coordinator','Proje koordinatörü'],res:['Researcher','Araştırmacı']};
+/* [start,end,title en,title tr,programme,company,role,budget] */
+const PROJ=[
+ ['2026-03',null,'IoT-Supported Smart Two-Way Communication and Digital Twin Platform for Elevators','Asansörler için IoT Destekli Akıllı Çift Yönlü İletişim ve Dijital İkiz Platformu','TÜBİTAK 1707','Butkon Lift','adv'],
+ ['2026-02',null,'CANopen-Lift Compliant, Secure Robot (or Device) Elevator Communication and Access Platform (BUT-CALL X2E)','CANopen-Lift Uyumlu, Güvenli Robot (veya Cihaz) Asansör İletişim ve Erişim Platformu (BUT-CALL X2E)','TÜBİTAK 1507','Butkon Lift','adv'],
+ ['2026-01',null,'AI and Image Processing-Based Traffic Analysis Application at Signalized Intersections','Sinyalize Kavşaklarda Yapay Zekâ ve Görüntü İşleme Tabanlı Trafik Analizi Uygulaması','TÜBİTAK 1501','MOSAŞ Group','adv'],
+ ['2025-09',null,'Development of an Error-State Attitude and Heading Reference System (AHRS)','Hata Durumlu (Error-State) Yönelim ve Başlık Referans Sistemi (AHRS) Geliştirilmesi','TÜBİTAK 1507','Link Robotics','adv'],
+ ['2025-08',null,'Design, Development, and Prototype Manufacturing of an Autonomous Orchard Spraying Machine with Smart Mapping Features','Akıllı Haritalama Özellikli Otonom Bahçe İlaçlama Makinesinin Tasarımı, Geliştirilmesi ve Prototip İmalatı','TÜBİTAK 1501','Önallar Agriculture','adv'],
+ ['2025-08',null,'Development of a Native Flight Control Ecosystem (UKE) for UAVs','İHA’lar için Yerli Uçuş Kontrol Ekosistemi (UKE) Geliştirilmesi','TÜBİTAK 1507','Otobot Robotics','adv'],
+ ['2025-07',null,'Green Transformation-Oriented Cloud-Based Macroscopic Traffic Analysis Software','Yeşil Dönüşüm Odaklı Bulut Tabanlı Makroskopik Trafik Analiz Yazılımı','TÜBİTAK 1832 (World Bank-funded)','MOSAŞ Group','adv'],
+ ['2024-11','2025-07','Data Processing and Traffic Analysis for Intelligent Intersection Transportation Technologies','Akıllı Kavşak Ulaşım Teknolojileri için Veri İşleme ve Trafik Analizi','KOSGEB R&amp;D','MOSAŞ Group','adv'],
+ ['2024-04','2025-07','Optimization of Artificial Intelligence-Supported Autonomous Mobile Robots and Fleet Management Based on the Internet of Things (IoT)','Nesnelerin İnterneti (IoT) Tabanlı Yapay Zekâ Destekli Otonom Mobil Robotların ve Filo Yönetiminin Optimizasyonu','KOSGEB R&amp;D','Otobot Robotics','adv'],
+ ['2024-04','2025-07','Development of an Autonomous Task Robot and Electronic Control Unit','Otonom Görev Robotu ve Elektronik Kontrol Ünitesi Geliştirilmesi','KOSGEB Innovation R&amp;D','Otobot Robotics','adv'],
+ ['2024-04',null,'Development of Smart Autonomous Spraying Technologies and Agricultural Field Mapping','Akıllı Otonom İlaçlama Teknolojileri ve Tarımsal Arazi Haritalama Geliştirilmesi','TÜBİTAK 1507','Otobot Robotics','adv'],
+ ['2024-04',null,'Digital Twin Technology and Solutions in Smart Intersection Systems','Akıllı Kavşak Sistemlerinde Dijital İkiz Teknolojisi ve Çözümleri','TÜBİTAK 1501','MOSAŞ Group','adv'],
+ ['2023-03','2024-09','Design and Development of Vehicle-to-Infrastructure (V2I) Module for Supporting Intelligent Transportation Systems','Akıllı Ulaşım Sistemlerini Desteklemek için Araç-Altyapı (V2I) Modülü Tasarımı ve Geliştirilmesi','TÜBİTAK 1507','MOSAŞ Group','adv'],
+ ['2022-04','2025-10','Proposing a Satellite Controlled Incentive System for Sustainable Sugar Beet Production','Sürdürülebilir Şeker Pancarı Üretimi için Uydu Kontrollü Teşvik Sistemi Önerisi','ERA-NET Cofund ICT-AGRI-FOOD','Agrovisio','coord'],
+ ['2022-01','2023-05','Adaptive Intelligent Control for IoT-Based Multi-Intersection Network','IoT Tabanlı Çok Kavşaklı Ağ için Uyarlanabilir Akıllı Kontrol','TÜBİTAK 1501','MOSAŞ Group','adv'],
+ ['2020-01','2022-05','Development of an Autonomous Task Robot and Electronic Control Unit','Otonom Görev Robotu ve Elektronik Kontrol Ünitesi Geliştirilmesi','TÜBİTAK 1501','Elfatek Electronics','adv'],
+ ['2018-04','2020-03','Coordinated Fully Adaptive Signalization Control System (K-TASK)','Koordineli Tam Uyarlanabilir Sinyalizasyon Kontrol Sistemi (K-TASK)','TÜBİTAK 1511','Innomotive','adv']
+];
+const projRow=p=>row(span(p[0],p[1]),b(p[2],p[3]),b(`${p[4]}; ${p[5]}; ${ROLE[p[6]][0]}`,`${p[4]}; ${p[5]}; ${ROLE[p[6]][1]}`));
+$('projlist').innerHTML=PROJ.map(projRow).join('');
+$('resproj').innerHTML=projRow(['2014-04','2017-04','Investigation of Water Behavior Inside the Well Under Various Pump Operating Conditions in Deep Wells Used for Agricultural Irrigation','Tarımsal Sulamada Kullanılan Derin Kuyularda Çeşitli Pompa Çalışma Koşulları Altında Kuyu İçi Su Davranışının İncelenmesi','TÜBİTAK 1001','','res']).replace('; ;',';');
+$('studproj').innerHTML=row('2014 – 2026',b('60 student projects advised','Danışmanlığı yapılan 60 öğrenci projesi'),b('Under TÜBİTAK 2209-A and 2209-B university student research programmes and the TUSAŞ LIFT-UP programme, several with industry partners. Examples: UAV localization without GPS (TUSAŞ); autonomous cleaning robot (Elfatek); training AI for autonomous vehicles with Eclipse SUMO and Unity 3D (MOSAŞ); civilian industrial anti-drone system (AVCI Defence).','TÜBİTAK 2209-A ve 2209-B üniversite öğrencileri araştırma projeleri destek programları ile TUSAŞ LIFT-UP programı kapsamında; birçoğu sanayi ortaklı. Örnekler: GPS’siz İHA konumlama (TUSAŞ); otonom temizlik robotu (Elfatek); Eclipse SUMO ve Unity 3D entegrasyonuyla otonom araçlar için yapay zekâ eğitimi (MOSAŞ); sivil amaçlı endüstriyel anti-dron sistemi (AVCI Defence).'));
+
+/* ---------- publications ---------- */
+/* [year, authors, title, venue, doi, WoS quartile] */
+const PUBS=[
+ [2026,'Budak, Sungur, Durdu','Quadrotor control using hybrid approaches: LQR-PID and LQR-FOPID methods','International Journal of Automation and Control 20(5)','10.1504/IJAAC.2026.10073110','Q4'],
+ [2026,'Budak, Sungur, Durdu','Hybrid LQR–SMC/STSMC with BB–BC Optimization for Enhanced Transient Performance and Chattering Suppression in a 3-DOF Hover System','Actuators 15(6), 300','10.3390/act15060300','Q2'],
+ [2026,'Budak, Sungur, Durdu','Disturbance-tolerant quadrotor control using a hybrid LQR and super-twisting sliding mode approach','Scientific Reports 16(1), 9718','10.1038/s41598-026-38820-0','Q1'],
+ [2026,'Yıldız Budak, Çeltek, Durdu','A novel approach to maximum weighted traffic flow method for effective signal control','Turkish Journal of Electrical Engineering and Computer Sciences 34(1), 119–136','10.55730/1300-0632.4166','Q3'],
+ [2026,'Budak, Sungur, Durdu','Deep reinforcement learning-based control of a 1-DOF helicopter: a comparative analysis of classical and modern methods','Physica Scripta 101(2), 026002','10.1088/1402-4896/ae2c22','Q2'],
+ [2025,'Aslan, Sabancı, Durdu, Kaousar','Advancing Remote Sensing With Few-Shot Learning: A Comprehensive Review of Methods, Challenges, and Future Directions','Transactions in GIS 29(8), e70176','10.1111/tgis.70176','Q1'],
+ [2025,'Azak, Bozkaya, Tığlıoğlu, Yusefi, Durdu','A Unified Monocular Vision-Based Driving Model for Autonomous Vehicles with Multi-Task Capabilities','IEEE Transactions on Intelligent Vehicles 10(9)','10.1109/TIV.2024.3483114','Q1'],
+ [2025,'Yalçınlı, Akdemir, Durdu, Evren, Özcan Akkaş','Signaling improvement model and efficiency analysis of the model','Traitement du Signal 42(2), 689–704','10.18280/ts.420208','Q4'],
+ [2024,'Yalçınlı, Akdemir, Durdu','Real-Time Performance Measurement Application via Bluetooth Signals for Signalized Intersections','Applied Sciences 14(17), 7849','10.3390/app14177849','Q1'],
+ [2024,'Yalçınlı, Akdemir, Durdu','Adaptive Traffic Management Model for Signalised Intersections','Elektronika ir Elektrotechnika 30(3), 72–82','10.5755/j02.eie.36536','Q4'],
+ [2024,'Yıldız, Aslan, Durdu, Kayabaşı','Consensus-based virtual leader tracking swarm algorithm with GDRRT*-PSO for path-planning of multiple-UAVs','Swarm and Evolutionary Computation 88, 101612','10.1016/j.swevo.2024.101612','Q1'],
+ [2024,'Yıldız, Durdu, Kayabaşı','Consensus-based virtual leader tracking algorithm for flight formation control of swarm UAVs','Turkish Journal of Electrical Engineering and Computer Sciences 32(2)','10.55730/1300-0632.4067','Q4'],
+ [2024,'Yusefi, Durdu, Bozkaya, Tığlıoğlu, Yılmaz, Sungur','A Generalizable D-VIO and Its Fusion with GNSS/IMU for Improved Autonomous Vehicle Localization','IEEE Transactions on Intelligent Vehicles 9(1)','10.1109/TIV.2023.3316361','Q1'],
+ [2023,'Aslan, Durdu, Sabancı','Goal distance-based UAV path planning approach, path optimization and learning-based path estimation: GDRRT*, PSO-GDRRT* and BiLSTM-PSO-GDRRT*','Applied Soft Computing 137, 110156','10.1016/j.asoc.2023.110156','Q1'],
+ [2022,'Aslan, Durdu, Yusefi, Yılmaz','HVIOnet: A deep learning based hybrid visual-inertial odometry approach for unmanned aerial system position estimation','Neural Networks 155, 461–474','10.1016/j.neunet.2022.09.001','Q1'],
+ [2022,'Aslan, Hasikin, Yusefi, Durdu, Sabancı, Azizan','COVID-19 Isolation Control Proposal via UAV and UGV for Crowded Indoor Environments: Assistive Robots in the Shopping Malls','Frontiers in Public Health 10, 855994','10.3389/fpubh.2022.855994','Q2'],
+ [2022,'Aslan, Durdu, Sabancı','Visual-Inertial Image-Odometry Network (VIIONet): A Gaussian process regression-based deep architecture proposal for UAV pose estimation','Measurement 194, 111030','10.1016/j.measurement.2022.111030','Q1'],
+ [2022,'Sabancı, Aslan, Ropelewska, Ünlerşen, Durdu','A Novel Convolutional-Recurrent Hybrid Network for Sunn Pest–Damaged Wheat Grain Detection','Food Analytical Methods 15, 1748–1760','10.1007/s12161-022-02251-0','Q2'],
+ [2022,'Aslan, Sabancı, Durdu, Ünlerşen','COVID-19 diagnosis using state-of-the-art CNN architecture features and Bayesian Optimization','Computers in Biology and Medicine 142, 105244','10.1016/j.compbiomed.2022.105244','Q1'],
+ [2022,'Aslan, Durdu, Sabancı, Ropelewska, Gültekin','A Comprehensive Survey of the Recent Studies with UAV for Precision Agriculture in Open Fields and Greenhouses','Applied Sciences 12(3), 1047','10.3390/app12031047','Q1'],
+ [2022,'Makineci, Karabörk, Durdu','ANN estimation model for photogrammetry-based UAV flight planning optimisation','International Journal of Remote Sensing 43(15–16), 5686–5708','10.1080/01431161.2021.1945159','Q2'],
+ [2022,'Yıldız, Durdu, Kayabaşı, Duramaz','CNN Based Sensor Fusion Method for Real-Time Autonomous Robotics Systems','Turkish Journal of Electrical Engineering and Computer Sciences 30(1), 79–93','10.3906/elk-2008-147','Q4'],
+ [2021,'Çeltek, Durdu','A Novel Adaptive Traffic Signal Control Based on Cloud/Fog/Edge Computing','International Journal of Intelligent Transportation Systems Research 19, 557–571','10.1007/s13177-021-00262-5','Q3'],
+ [2021,'Durdu, Çeltek, Orhan','Detection of Vortex Cavitation With The Method Adaptive Neural Fuzzy Networks in the Deep Well Pumps','Journal of Tekirdag Agricultural Faculty 18(4), 613–624','10.33462/jotaf.769037','Q3'],
+ [2021,'Ali, Durdu, Çeltek, Yılmaz','An Adaptive Method for Traffic Signal Control Based on Fuzzy Logic with Webster and Modified Webster Formula Using SUMO Traffic Simulator','IEEE Access 9, 102985–102997','10.1109/ACCESS.2021.3094270','Q2'],
+ [2021,'Çeltek, Durdu, Ali','Evaluating Action Durations for Adaptive Traffic Signal Control Based On Deep Q-Learning','International Journal of Intelligent Transportation Systems Research 19(3)','','Q3'],
+ [2021,'İlgen, Durdu, Gülbahçe, Çakan','Optimal Tuning of the SMC Parameters for a Two-Link Manipulator Co-Simulation Control','Elektronika ir Elektrotechnika 27(5), 4–10','10.5755/j02.eie.28954','Q4'],
+ [2021,'Gürtürk, Yusefi, Aslan, Soycan, Durdu, Masiero','The YTU Dataset and Recurrent Neural Network Based Visual-Inertial Odometry','Measurement 184, 109878','10.1016/j.measurement.2021.109878','Q1'],
+ [2021,'Aslan, Sabancı, Durdu','A CNN-based novel solution for determining the survival status of heart failure patients with clinical record data: numeric to image','Biomedical Signal Processing and Control 68, 102716','10.1016/j.bspc.2021.102716','Q1'],
+ [2021,'Yusefi, Durdu, Aslan, Sungur','LSTM and Filter Based Comparison Analysis for Indoor Global Localization in UAVs','IEEE Access 9, 10054–10069','10.1109/ACCESS.2021.3049896','Q2'],
+ [2021,'Aslan, Ünlerşen, Sabancı, Durdu','CNN-based transfer learning–BiLSTM network: A novel approach for COVID-19 infection detection','Applied Soft Computing 98, 106912','10.1016/j.asoc.2020.106912','Q1'],
+ [2020,'Sabancı, Aslan, Durdu','Bread and Durum Wheat Classification Using Wavelet Based Image Fusion','Journal of the Science of Food and Agriculture 100(15), 5577–5585','10.1002/jsfa.10610','Q1'],
+ [2020,'Ali, Durdu, Çeltek, Gültekin','Fuzzy Logic and Webster’s Optimal Cycle Based Decentralized Coordinated Adaptive Traffic Control Method','Elektronika ir Elektrotechnika 26(4), 57–64','10.5755/j01.eie.26.4.25959','Q4'],
+ [2020,'Aslan, Durdu, Sabancı, Mutluer','CNN and HOG Based Comparison Study for Complete Occlusion Handling in Human Tracking','Measurement 158, 107704','10.1016/j.measurement.2020.107704','Q1'],
+ [2020,'Aslan, Durdu, Sabancı','Human action recognition with bag of visual words using different machine learning methods and hyperparameter optimization','Neural Computing and Applications 32(12), 8585–8597','10.1007/s00521-019-04365-9','Q2'],
+ [2020,'Tarbosh, Aydoğdu, Farah, Talib, Salh, Çankaya, Omar, Durdu','Review and Investigation of Simplified Rules Fuzzy Logic Speed Controller of High Performance Induction Motor Drives','IEEE Access 8, 49377–49394','10.1109/ACCESS.2020.2977115','Q2'],
+ [2020,'Çeltek, Durdu, Ali','Real-time Traffic Signal Control with Swarm Optimization Methods','Measurement 166, 108206','10.1016/j.measurement.2020.108206','Q1'],
+ [2019,'Durdu, Korkmaz','A novel map merging technique for occupancy grid-based maps using multi-robot: a semantic approach','Turkish Journal of Electrical Engineering and Computer Sciences 27(5), 3980–3993','10.3906/elk-1807-335','Q4'],
+ [2019,'Durdu, Erkmen, Yılmaz','Reshaping human intention in Human-Robot Interactions by robot moves: A comparative analysis of HMM and OOM methods','Interaction Studies 20(3), 534–564','10.1075/is.18068.dur','Q3'],
+ [2019,'Durdu, Dursun','Sliding Mode Control for Position Tracking of Servo System with a Variable Loaded DC Motor','Elektronika ir Elektrotechnika 25(4), 8–16','10.5755/j01.eie.25.4.23964','Q4'],
+ [2019,'Aslan, Durdu, Sabancı, Erdoğan','An approach for learning from robots using formal languages and automata','Industrial Robot 46(4), 490–498','10.1108/IR-11-2018-0240','Q3'],
+ [2019,'Durdu, Korkmaz','Autonomously Simultaneous Localization and Mapping Based on Line Tracking in a Factory-Like Environment','Advances in Electrical and Electronic Engineering 17(1), 45–53','10.15598/aeee.v17i1.3048','Q4'],
+ [2018,'Durdu, Ergene, Demircan, Uğuz, Mahmutoğlu, Kurnaz','Image Processing based Task Allocation for Autonomous Multi Rotor Unmanned Aerial Vehicles','International Journal of Advanced Computer Science and Applications 9(11), 551–555','10.14569/IJACSA.2018.091176','Q3'],
+ [2017,'Korkmaz, Durdu','Real-Time Implementation of ORB-Based Probabilistic 3D Mapping','Electronics World 123(1975), 38–41','','Q4'],
+ [2016,'Durdu, Erkmen, Erkmen','Estimating and Reshaping Human Intention via Human-Robot Interaction','Turkish Journal of Electrical Engineering and Computer Sciences 24(1), 88–104','','Q4']
+];
+let pf='all';
+function pubItem(p,showYear){
+  const au=p[1].replace(/Durdu/g,'<b>Durdu</b>');
+  const q=p[5]?`<span class="q ${p[5]==='Q1'?'q1':''}">WoS ${p[5]}</span>`:'';
+  const doi=p[4]?` <a href="https://doi.org/${p[4]}" target="_blank" rel="noopener">DOI</a>`:'';
+  return row(showYear?p[0]:'',`<p class="pub"><span class="au">${au}</span><span class="ti">${p[2]}</span><span class="vn">${p[3]}${doi}${q}</span></p>`,'');
+}
+function renderPubs(){
+  const list=PUBS.filter(p=>pf==='all'||(pf==='Q34'?(p[5]==='Q3'||p[5]==='Q4'):p[5]===pf));
+  let last=0;
+  $('pubs').innerHTML=list.map(p=>{const s=p[0]!==last;last=p[0];return pubItem(p,s)}).join('');
+  $('pubcount').innerHTML=b(`${list.length} of ${PUBS.length}`,`${PUBS.length} makaleden ${list.length}`);
+}
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  pf=c.dataset.f;document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===c));renderPubs();
+}));
+renderPubs();
+
+const CONF=[
+ [2026,'Toy, Durdu','Fault-Tolerant Human Detection using Radar-Camera Fusion','IEEE ECAI 2026, Bucharest','10.1109/ECAI69016.2026.11613727'],
+ [2025,'İlgen, Durdu','Reinforcement Learning Based Traffic Signal Control: A Performance Comparison Under Different Traffic Scenarios','IEEE ATEE 2025, Bucharest','10.1109/ATEE66006.2025.11299972'],
+ [2025,'Çağıran, Akpınar, Durdu','Self-Recovery Algorithm for Autonomous Mobile Robots in Industrial Environments','IEEE ATEE 2025, Bucharest','10.1109/ATEE66006.2025.11299880'],
+ [2025,'Toy, Yusefi, Durdu','Autonomous Human Tracking Using Vision-LiDAR Fusion with Model Predictive Control-Based Trajectory Following','IEEE ATEE 2025, Bucharest','10.1109/ATEE66006.2025.11299927'],
+ [2025,'Yusefi, Toy, Durdu','RobustPointNet++: Enhancing PointNet++ with Noise-Filtering and Learned Augmentation for Sparse LiDAR Data','IEEE ATEE 2025, Bucharest','10.1109/ATEE66006.2025.11299989'],
+ [2025,'Koşar, Akpınar, Durdu','Comparative Performance Analysis of ROS 2 Local Controllers on an Autonomous Mobile Robot','IEEE ISAS 2025, Gaziantep','10.1109/ISAS66241.2025.11101804'],
+ [2024,'Yusefi, Durdu, Toy','Camera/LiDAR Sensor Fusion-based Autonomous Navigation','IEEE INFOTEH-JAHORINA 2024','10.1109/INFOTEH60418.2024.10495974'],
+ [2023,'Durdu, Tunçer, Yıldız','Graph-Based Collision Avoidance Algorithm Among Swarm Agents','IEEE ISEEE 2023, Galati','10.1109/ISEEE58596.2023.10310351']
+];
+let lc=0;
+$('conf').innerHTML=CONF.map(p=>{const s=p[0]!==lc;lc=p[0];
+  return row(s?p[0]:'',`<p class="pub"><span class="au">${p[1].replace('Durdu','<b>Durdu</b>')}</span><span class="ti">${p[2]}</span><span class="vn">${p[3]} <a href="https://doi.org/${p[4]}" target="_blank" rel="noopener">DOI</a></span></p>`,'')}).join('');
+
+const CH=[
+ [2021,'Aslan, Durdu, Yusefi, Sabancı, Sungur','A Tutorial: Mobile Robotics, SLAM, Bayesian Filter, Keyframe Bundle Adjustment and ROS Applications (Ch. 7)','In: Koubaa A. (ed.), Robot Operating System (ROS), Studies in Computational Intelligence 962, Springer, Cham'],
+ [2019,'Dhulkefl, Durdu, Terzioğlu','A* and Dijkstra Algorithm (Ch. 6); Rapidly Exploring Random Trees (RRT) Algorithm (Ch. 5)','Engineering Research Papers, December 2019'],
+ [2012,'Durdu, Erkmen, Erkmen, Yılmaz','Robotic Hardware and Software Integration for Changing Human Intentions (Ch. 13)','In: Sobh T., Xiong X. (eds.), Prototyping of Robotic Systems: Applications of Design and Implementation, IGI Global'],
+ [2025,'Sayın, Topuz, Aslan, Durdu','Standardization in Elevator Systems: Call and Display Panel Design Compatible with CANopen Communication Protocol (Ch. 7)','In: Current Approaches in Applied Statistics II, Özgür Yayınları, doi:10.58830/ozgur.pub865.c3505'],
+ [2025,'Koyuncu, Demir, Aslan, Durdu','Multi-Frequency and Multi-Protocol RFID Card Reader Device: Hardware and Application Design (Ch. 10)','In: Current Approaches in Applied Statistics I, Özgür Yayınları, doi:10.58830/ozgur.pub862.c3493']
+];
+$('chapters').innerHTML=CH.map(p=>row('',`<p class="pub"><span class="au">${p[1].replace('Durdu','<b>Durdu</b>')}</span><span class="ti">${p[2]}</span><span class="vn">${p[3]}</span></p>`,'')).join('');
+$('morepubs').innerHTML=b(
+ 'The full record also includes 46 articles in other refereed indexes and 78 conference papers, plus one edited proceedings volume (TOK 2024). The complete list is on <a href="https://scholar.google.com/citations?user=4wHq7iwAAAAJ&hl=tr&oi=ao" target="_blank" rel="noopener">Google Scholar</a>.',
+ 'Tam kayıtta ayrıca diğer hakemli indekslerde 46 makale, 78 bildiri ve bir editörlü bildiri kitabı (TOK 2024) bulunmaktadır. Tam liste <a href="https://scholar.google.com/citations?user=4wHq7iwAAAAJ&hl=tr&oi=ao" target="_blank" rel="noopener">Google Scholar</a> sayfasındadır.');
+
+/* ---------- teaching ---------- */
+const CRS=[
+ ['2019 – 2025','Konya Technical University','Konya Teknik Üniversitesi',[['Automatic Control 1 and 2','Otomatik Kontrol 1 ve 2'],['Introduction to Robotics','Robotiğe Giriş'],['Intelligent Control Systems','Akıllı Kontrol Sistemleri'],['Stability Theories for Dynamical Systems','Dinamik Sistemler için Kararlılık Teorileri'],['Tele Robots','Tele Robotlar'],['Robotic Vision','Robotik Görü']]],
+ ['2013 – 2018','Selçuk University','Selçuk Üniversitesi',[['Automatic Control 1 and 2','Otomatik Kontrol 1 ve 2'],['Introduction to Robotics','Robotiğe Giriş'],['Intelligent Control Systems','Akıllı Kontrol Sistemleri'],['Linear System Theory','Doğrusal Sistem Teorisi'],['Stability Theories for Dynamical Systems','Dinamik Sistemler için Kararlılık Teorileri'],['Tele Robots','Tele Robotlar'],['Robotic Vision','Robotik Görü']]],
+ ['2014 – 2017','KTO Karatay University','KTO Karatay Üniversitesi',[['Control Engineering','Kontrol Mühendisliği']]]
+];
+$('courses').innerHTML=CRS.map(c=>row(c[0],b(c[1],c[2]),b(c[3].map(x=>x[0]).join('; '),c[3].map(x=>x[1]).join('; ')))).join('');
+const PHD=[
+ ['2026','Serkan Budak','Mathematical Modeling and Development of Control Algorithms for Unmanned Vehicle Systems','KTUN'],
+ ['2025','Fuat Yalçınlı','Interactive and adaptive traffic management model at signalized intersections','KTUN'],
+ ['2024','Salim Azak','Innovative Solution Approaches Based on Deep Learning for Autonomous Driving','KTUN'],
+ ['2024','Abdullah Yusefi','Sensor Fusion and Vision-based Localization for Autonomous Systems','KTUN'],
+ ['2024','Berat Yıldız','Intelligent Path Planning for Unmanned Aerial Vehicle (UAV) Swarms','KTUN'],
+ ['2022','Muhammet Fatih Aslan','Development of Autonomous Unmanned Aerial Systems in Indoor Environments','KTUN'],
+ ['2021','Seyit Alperen Çeltek','Reinforcement Learning Algorithms and IoT-based Control of Urban Traffic Signal Networks','KTUN'],
+ ['2021','Muzamil Eltejani Mohammed Ali','Coordinated Adaptive Traffic Signal Control for Smart Cities','Selçuk'],
+ ['2019','Mehmet Korkmaz','Investigation of SLAM and VSLAM Algorithms, Development and Implementation of a New Multi-Robot Map Merging Method','KTUN'],
+ ['2017','Burak Yılmaz','A New Approach to Diagnosing Multiple Sclerosis in MRI Images','Selçuk']
+];
+const UNI={KTUN:['Konya Technical University','Konya Teknik Üniversitesi'],'Selçuk':['Selçuk University','Selçuk Üniversitesi']};
+$('phd').innerHTML=PHD.map(p=>row(p[0],`${p[1]}`,`${p[2]}. ${b(UNI[p[3]][0],UNI[p[3]][1])}`)).join('');
+const MS=[
+ ['2024','Zülal Hilal Yıldız Budak','Adjustable and Weight-based Adaptive Traffic Signal Control for Multiple Intersections','KTUN'],
+ ['2023','Nevzat Bol','Prediction of Process Parameters in Additive Manufacturing Using Artificial Intelligence Methods','KTUN'],
+ ['2022','Ahmet Furkan Büyükkelek','Mapping with Unmanned Aerial Vehicles and AI-based Object Recognition','KTUN'],
+ ['2019','Sinan İlgen','Control Applications for Robot Manipulator Performance','KTUN'],
+ ['2019','Berat Yıldız','Development of an Autonomous Robotic System Using Sensor Fusion Techniques','KTUN'],
+ ['2019','Aykut Tahtırvancı','Mosaicking of Indoor and Outdoor Images Using Unmanned Aerial Vehicles','KTUN'],
+ ['2019','Muhammed Esat Dere','Optimal Pathfinding for Mobile Robots','KTUN'],
+ ['2019','Mehmet Celalettin Ergene','Object Tracking Applications for Intelligent Control Systems in Unmanned Aerial Vehicles','KTUN'],
+ ['2019','Süleyman Demir','Human-Robot Interaction in Indoor Environments','KTUN'],
+ ['2019','Taha Abdulwahid Mahmood','Adaptive Traffic Signal Control for Smart Cities','Selçuk'],
+ ['2019','Elaf Jirjees Dhulkefl','Shortest Path Planning Applications in 3D Environments','Selçuk'],
+ ['2018','Muhammet Fatih Aslan','Intelligent Sensing and Tracking Applications for Human-Machine Interaction','Selçuk'],
+ ['2017','Halil Çetin','Robotic System Design with Autonomous Movements and Path Planning in Known Environments','Selçuk'],
+ ['2016','Emre Hasan Dursun','Sliding Mode Control of a DC Motor with Variable Load','Selçuk'],
+ ['2016','Mehmet Latif Levent','Prediction of a Time-Varying Linear System Using Kalman Filter and Fuzzy Iterative Learning Control','Selçuk'],
+ ['2016','Üzeyir İlbay Bozkurt','Development of Distributed Control Systems for Industrial Environments Based on Wireless Sensor Networks','Selçuk']
+];
+$('ms').innerHTML=MS.map(p=>row(p[0],p[1],`${p[2]}. ${b(UNI[p[3]][0],UNI[p[3]][1])}`)).join('');
+
+/* ---------- honors ---------- */
+const AW=[
+ ['2024','University Entrepreneurship Club Award, 10th GİV Entrepreneurship Awards','Üniversite Girişimcilik Kulübü Ödülü, 10. GİV Girişimcilik Ödülleri'],
+ ['2019','TÜBİTAK 2219 International Postdoctoral Research Fellowship Program for Turkish Citizens','TÜBİTAK 2219 Yurt Dışı Doktora Sonrası Araştırma Burs Programı'],
+ ['2011','TÜBİTAK 2214 International Research Fellowship Programme for PhD Students','TÜBİTAK 2214 Yurt Dışı Araştırma Burs Programı (doktora öğrencileri)'],
+ ['2014, 2019, 2023','TÜBİTAK 2224-A Grant Program for Participation in Scientific Meetings Abroad','TÜBİTAK 2224-A Yurt Dışı Bilimsel Etkinliklere Katılım Desteği'],
+ ['2014','Best Presentation Award, International Conference on Artificial Intelligence (ICOAI)','En İyi Sunum Ödülü, International Conference on Artificial Intelligence (ICOAI)'],
+ ['2011','Certificate of Merit (student), International Conference on Intelligent Automation and Robotics (ICIAR)','Başarı Belgesi (öğrenci), International Conference on Intelligent Automation and Robotics (ICIAR)']
+];
+$('awards').innerHTML=AW.map(a=>row(a[0],b(a[1],a[2]),'')).join('');
+/* [year, en, tr] */
+const COMP=[
+ [2016,'YILDIZ Wars, free category: third place (Helpful Shopping Robot)','YILDIZ Wars serbest kategori: üçüncülük (Yardımsever Alışveriş Robotu)'],
+ [2016,'13th METU Robotics Days, free category: third place and jury special award (Mine Searching Robot with Sun Tracking Mechanism)','13. ODTÜ Robot Günleri serbest kategori: üçüncülük ve jüri özel ödülü (Güneş Takip Mekanizmalı Mayın Arama Robotu)'],
+ [2017,'TÜBİTAK UAV Competition, rotary wing: second place (S-Air team)','TÜBİTAK İHA Yarışması döner kanat: ikincilik (S-Air takımı)'],
+ [2018,'15th METU Robotics Days, innovation: second place (Active Security Robot)','15. ODTÜ Robot Günleri inovasyon: ikincilik (Aktif Güvenlik Robotu)'],
+ [2018,'TÜBİTAK UAV Competition, rotary wing: second and third places (S-Quad and S-Air teams)','TÜBİTAK İHA Yarışması döner kanat: ikincilik ve üçüncülük (S-Quad ve S-Air takımları)'],
+ [2019,'16th METU Robotics Days, innovation: second place (Autonomous Cleaning Robot)','16. ODTÜ Robot Günleri inovasyon: ikincilik (Otonom Temizlik Robotu)'],
+ [2019,'OpenZeka Mini Autonomous Vehicle Competition, university category: championship','OpenZeka Mini Otonom Araç Yarışması üniversite kategorisi: şampiyonluk'],
+ [2019,'Teknofest TÜBİTAK UAV Competition, rotary wing: championship (RACLAB Aybars)','Teknofest TÜBİTAK İHA Yarışması döner kanat: şampiyonluk (RACLAB Aybars)'],
+ [2020,'METU Robotics Days, autonomous UAV and image processing: championship (RACLAB Tugberk)','ODTÜ Robot Günleri otonom İHA-görüntü işleme: şampiyonluk (RACLAB Tugberk)'],
+ [2020,'Teknofest Intelligent Transportation Competition: third place (RACLAB Intelligent Transportation Team)','Teknofest Akıllı Ulaşım Yarışması: üçüncülük (RACLAB Akıllı Ulaşım Takımı)'],
+ [2021,'TÜBİTAK 2242 University Research Project Competition, social innovation and entrepreneurship: encouragement award (AI-Supported Smart Cleaning Robot)','TÜBİTAK 2242 Üniversite Öğrencileri Araştırma Projeleri Yarışması, sosyal inovasyon ve girişimcilik: teşvik ödülü (Yapay Zekâ Destekli Akıllı Temizlik Robotu)'],
+ [2021,'Teknofest Intelligent Transportation Competition: second place','Teknofest Akıllı Ulaşım Yarışması: ikincilik'],
+ [2021,'Teknofest Robotaxi, ready vehicle: most original software (RACLAB SİGUN)','Teknofest Robotaksi hazır araç: en özgün yazılım (RACLAB SİGUN)'],
+ [2022,'18th METU Robotics Days, autonomous UAV and image processing: third place (RACLAB Aybars)','18. ODTÜ Robot Günleri otonom İHA-görüntü işleme: üçüncülük (RACLAB Aybars)'],
+ [2022,'18th METU Robotics Days, innovation: honorable mention (RACLAB Aspar)','18. ODTÜ Robot Günleri inovasyon: mansiyon (RACLAB Aspar)'],
+ [2022,'Teknofest Robotaxi, ready vehicle: most original software and performance first place (RACLAB SİGUN)','Teknofest Robotaksi hazır araç: en özgün yazılım ve performans birinciliği (RACLAB SİGUN)'],
+ [2022,'Teknofest Swarm UAV Competition: best team spirit','Teknofest Sürü İHA Yarışması: en iyi takım ruhu'],
+ [2022,'Teknofest TÜBİTAK 2242, defense, space and aviation: second place (Underwater Vehicle Control Board Communicating with Computers)','Teknofest TÜBİTAK 2242 savunma, uzay ve havacılık: ikincilik (Bilgisayarla Haberleşen Su Altı Aracı Kontrol Kartı)'],
+ [2022,'Teknofest Intelligent Transportation Competition: fourth place','Teknofest Akıllı Ulaşım Yarışması: dördüncülük'],
+ [2023,'Teknofest Agricultural UAV Competition: most original design','Teknofest Tarım İHA Yarışması: en özgün tasarım'],
+ [2023,'Teknofest TÜBİTAK International UAV Competition, rotary and fixed wing: performance awards (RACLAB UAV and RACLAB MERKÜT UAV)','Teknofest TÜBİTAK Uluslararası İHA Yarışması döner ve sabit kanat: performans ödülleri (RACLAB UAV ve RACLAB MERKÜT UAV)'],
+ [2023,'Teknofest Robotaxi, ready vehicle: performance third place (RACLAB SİGUN)','Teknofest Robotaksi hazır araç: performans üçüncülüğü (RACLAB SİGUN)'],
+ [2024,'Teknofest Robotaxi, ready vehicle: performance second place (RACLAB SİGUN)','Teknofest Robotaksi hazır araç: performans ikinciliği (RACLAB SİGUN)'],
+ [2025,'“Accessible and Interconnected Türkiye 2053” inter-university R&amp;D idea competition: honorable mention (Air Rail Patrol)','“Erişilebilir ve Bağlantılı Türkiye 2053” üniversiteler arası Ar-Ge fikir yarışması: mansiyon (Air Rail Patrol)'],
+ [2025,'TEKNO-SEL Technology and Robotics Competition, free project: second place','TEKNO-SEL Teknoloji ve Robotik Yarışması serbest proje: ikincilik'],
+ [2025,'Teknofest Robotaxi, ready vehicle: second place and most original software (RACLAB SİGUN)','Teknofest Robotaksi hazır araç: ikincilik ve en özgün yazılım (RACLAB SİGUN)'],
+ [2025,'Teknofest Unmanned Underwater Systems Competition: championship and best team spirit (RACLAB NOVA)','Teknofest İnsansız Su Altı Sistemleri Yarışması: şampiyonluk ve en iyi takım ruhu (RACLAB NOVA)'],
+ [2025,'Teknofest TÜBİTAK International UAV Competition, free category: third place (RACLAB TULPAR’S)','Teknofest TÜBİTAK Uluslararası İHA Yarışması serbest kategori: üçüncülük (RACLAB TULPAR’S)'],
+ [2025,'Teknofest Industry Digital Technologies Competition, open category: honorable mention, third place (RACLAB FAAL)','Teknofest Sanayi Dijital Teknolojileri Yarışması açık kategori: mansiyon, üçüncülük (RACLAB FAAL)']
+].reverse();
+const cr=c=>row(c[0],b(c[1],c[2]),'');
+$('comps').innerHTML=COMP.slice(0,8).map(cr).join('');
+$('comps2').innerHTML=COMP.slice(8).map(cr).join('');
+$('service').innerHTML=
+ row('2024',b('General co-chair, 25th Automatic Control National Conference (TOK 2024), Konya Technical University','Genel eş başkan, 25. Otomatik Kontrol Ulusal Konferansı (TOK 2024), Konya Teknik Üniversitesi'),'')+
+ row('2024',b('Program committee member, 8th EAI International Conference on Robotic Sensor Networks (ROSENET 2024), Istanbul','Program komitesi üyesi, 8th EAI International Conference on Robotic Sensor Networks (ROSENET 2024), İstanbul'),'')+
+ row('2022',b('Session chair, 23rd Automatic Control National Conference (TOK 2022), Fırat University, Elazığ','Oturum başkanı, 23. Otomatik Kontrol Ulusal Konferansı (TOK 2022), Fırat Üniversitesi, Elazığ'),'');
+$('members').innerHTML=row('',b('IEEE (Senior Member); IEEE Robotics and Automation Society; IFAC International Federation of Automatic Control; IAENG International Association of Engineers; Chamber of Electrical Engineers of Türkiye (EMO)','IEEE (kıdemli üye); IEEE Robotik ve Otomasyon Topluluğu; IFAC Uluslararası Otomatik Kontrol Federasyonu; IAENG Uluslararası Mühendisler Birliği; Elektrik Mühendisleri Odası (EMO)'),'');
+
+/* ---------- contact ---------- */
+$('contactlist').innerHTML=
+ row(b('Email','E-posta'),'<a href="mailto:akifdurdu@gmail.com">akifdurdu@gmail.com</a>','')+
+ row(b('Office','Ofis'),b('Konya Technical University, Faculty of Engineering and Natural Sciences, Department of Electrical-Electronics Engineering, Selçuklu, 42075 Konya, Türkiye','Konya Teknik Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi, Elektrik-Elektronik Mühendisliği Bölümü, Selçuklu, 42075 Konya, Türkiye'),'+90 332 205 17 35')+
+ row(b('Laboratory','Laboratuvar'),'<a href="https://raclab.org" target="_blank" rel="noopener">raclab.org</a>','')+
+ row(b('Profiles','Profiller'),PROF.slice(0,5).map(p=>`<a href="${p[1]}" target="_blank" rel="noopener">${p[0]}</a>`).join(', '),'');
+
+/* ---------- language ---------- */
+function setLang(l,save){
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.set===l));
+  document.querySelector('meta[name=description]').content=l==='tr'
+    ?'Akif Durdu, Konya Teknik Üniversitesi Elektrik-Elektronik Mühendisliği Profesörü. Otonom sistemler, akıllı ulaşım, robotik ve yapay zekâ.'
+    :'Akif Durdu, Professor of Electrical and Electronics Engineering at Konya Technical University. Autonomous systems, intelligent transportation, robotics and AI.';
+  if(save){try{localStorage.setItem('lang',l)}catch(e){}}
+}
+document.querySelectorAll('.lang button').forEach(x=>x.addEventListener('click',()=>setLang(x.dataset.set,true)));
+let stored=null;try{stored=localStorage.getItem('lang')}catch(e){}
+setLang(stored||((navigator.language||'').toLowerCase().startsWith('tr')?'tr':'en'),false);
+
+/* ---------- active section in nav ---------- */
+const links=[...document.querySelectorAll('#nav a')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
+
+/* ---------- route-planning field (RRT) ---------- */
+(function(){
+  const cv=$('field'),ctx=cv.getContext('2d');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W,H,dpr,obs,nodes,start,goal,found,path,reveal,raf,step;
+  const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const rnd=(a,b)=>a+Math.random()*(b-a);
+  const dist=(a,b,c,d)=>Math.hypot(a-c,b-d);
+  function size(){const r=cv.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);step=Math.max(10,Math.min(18,W/45));}
+  function hit(a,c){
+    for(const o of obs){
+      const dx=c.x-a.x,dy=c.y-a.y,l2=dx*dx+dy*dy;
+      let t=l2?((o.x-a.x)*dx+(o.y-a.y)*dy)/l2:0;t=Math.max(0,Math.min(1,t));
+      if(dist(a.x+t*dx,a.y+t*dy,o.x,o.y)<o.r+3)return true;
+    }
+    return false;
+  }
+  function reset(){
+    cancelAnimationFrame(raf);size();
+    start={x:Math.max(26,W*.04),y:rnd(H*.6,H*.88)};
+    goal={x:W-Math.max(26,W*.04),y:rnd(H*.12,H*.4)};
+    obs=[];let tries=0;const want=Math.round(W/62);
+    while(obs.length<want&&tries<400){
+      tries++;const r=rnd(H*.05,H*.13),x=rnd(W*.14,W*.86),y=rnd(H*.06,H*.94);
+      if(dist(x,y,start.x,start.y)<r+44||dist(x,y,goal.x,goal.y)<r+44)continue;
+      if(obs.some(o=>dist(x,y,o.x,o.y)<o.r+r+16))continue;
+      obs.push({x,y,r});
+    }
+    nodes=[{x:start.x,y:start.y,p:-1}];found=false;path=null;reveal=0;
+    if(reduce){let n=0;while(!found&&n<6000){grow(1);n++;}if(!found){return reset();}reveal=1;draw();}
+    else loop();
+  }
+  function grow(k){
+    for(let i=0;i<k&&!found;i++){
+      const s=Math.random()<.1?goal:{x:rnd(0,W),y:rnd(0,H)};
+      let bi=0,bd=1e12;
+      for(let j=0;j<nodes.length;j++){const d=(nodes[j].x-s.x)**2+(nodes[j].y-s.y)**2;if(d<bd){bd=d;bi=j}}
+      const n=nodes[bi],d=Math.sqrt(bd);if(d<1)continue;
+      const t=Math.min(step,d)/d,p={x:n.x+(s.x-n.x)*t,y:n.y+(s.y-n.y)*t,p:bi};
+      if(hit(n,p))continue;
+      nodes.push(p);
+      if(dist(p.x,p.y,goal.x,goal.y)<step*1.2&&!hit(p,goal)){nodes.push({x:goal.x,y:goal.y,p:nodes.length-1});found=true;extract();}
+    }
+  }
+  function extract(){
+    const raw=[];let i=nodes.length-1;while(i>=0){raw.push(nodes[i]);i=nodes[i].p;}raw.reverse();
+    const sm=[raw[0]];let a=0;
+    while(a<raw.length-1){let z=raw.length-1;while(z>a+1&&hit(raw[a],raw[z]))z--;sm.push(raw[z]);a=z;}
+    path=sm;
+    path.len=0;for(let k=1;k<path.length;k++)path.len+=dist(path[k].x,path[k].y,path[k-1].x,path[k-1].y);
+  }
+  function draw(){
+    const acc=cssv('--acc'),edge=cssv('--edge'),obsC=cssv('--obs'),ink=cssv('--ink');
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=obsC;ctx.strokeStyle=edge;ctx.lineWidth=1;
+    obs.forEach(o=>{ctx.beginPath();ctx.arc(o.x,o.y,o.r,0,7);ctx.fill();ctx.globalAlpha=.5;ctx.stroke();ctx.globalAlpha=1;});
+    ctx.strokeStyle=edge;ctx.globalAlpha=found?.55:.9;ctx.beginPath();
+    for(let i=1;i<nodes.length;i++){const n=nodes[i],p=nodes[n.p];ctx.moveTo(p.x,p.y);ctx.lineTo(n.x,n.y);}
+    ctx.stroke();ctx.globalAlpha=1;
+    if(path&&reveal>0){
+      ctx.strokeStyle=acc;ctx.lineWidth=2.6;ctx.lineJoin='round';ctx.lineCap='round';
+      let left=path.len*reveal;ctx.beginPath();ctx.moveTo(path[0].x,path[0].y);
+      for(let k=1;k<path.length;k++){
+        const a=path[k-1],c=path[k],seg=dist(a.x,a.y,c.x,c.y);
+        if(left>=seg){ctx.lineTo(c.x,c.y);left-=seg;}
+        else{const t=left/seg;ctx.lineTo(a.x+(c.x-a.x)*t,a.y+(c.y-a.y)*t);break;}
+      }
+      ctx.stroke();
+    }
+    ctx.fillStyle=ink;ctx.beginPath();ctx.arc(start.x,start.y,4.5,0,7);ctx.fill();
+    ctx.strokeStyle=ink;ctx.lineWidth=1.6;ctx.beginPath();ctx.arc(goal.x,goal.y,7,0,7);ctx.stroke();
+    ctx.fillStyle=ink;ctx.beginPath();ctx.arc(goal.x,goal.y,2.4,0,7);ctx.fill();
+  }
+  function loop(){
+    if(!found){grow(4);if(nodes.length>3500){return reset();}}
+    else if(reveal<1){reveal=Math.min(1,reveal+.018);}
+    draw();
+    if(!found||reveal<1)raf=requestAnimationFrame(loop);
+  }
+  let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(reset,200)});
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(nodes)draw()});
+  cv.addEventListener('click',reset);$('replan').addEventListener('click',reset);
+  reset();
+})();
+</script>
+</body>
+</html>
