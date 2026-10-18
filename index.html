@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Akif Durdu","jobTitle":"Professor","affiliation":{"@type":"CollegeOrUniversity","name":"Konya Technical University"},"email":"akifdurdu@gmail.com","url":"https://akifdurdu.github.io/","sameAs":["https://orcid.org/0000-0002-5611-2322","https://scholar.google.com/citations?user=4wHq7iwAAAAJ","https://www.researchgate.net/profile/Akif-DURDU","https://raclab.org"]}
+{"@context":"https://schema.org","@type":"Person","name":"Akif Durdu","jobTitle":"Professor","affiliation":{"@type":"CollegeOrUniversity","name":"Konya Technical University"},"url":"https://akifdurdu.github.io/","sameAs":["https://orcid.org/0000-0002-5611-2322","https://scholar.google.com/citations?user=4wHq7iwAAAAJ","https://www.researchgate.net/profile/Akif-DURDU","https://raclab.org"]}
 </script>
 <style>
 :root{
@@ -138,6 +138,7 @@ summary{cursor:pointer;font-family:var(--sans);font-size:.9rem;color:var(--acc);
       <h1>Akif Durdu</h1>
       <p class="role" data-en="Professor of Electrical and Electronics Engineering, Konya Technical University" data-tr="Konya Teknik Üniversitesi Elektrik-Elektronik Mühendisliği Profesörü"></p>
       <p class="lede" data-en="I work on robots, drones and traffic controllers that have to find their own way: planning routes, localizing without GPS, and coordinating many agents at once. A good part of the work is carried out with industry partners in Konya and beyond." data-tr="Kendi yolunu bulmak zorunda olan robotlar, insansız hava araçları ve trafik kontrolcüleri üzerinde çalışıyorum: rota planlama, GPS olmadan konumlama ve çok sayıda aracın eş güdümü. Çalışmaların önemli bir kısmı Konya'daki ve diğer şehirlerdeki sanayi ortaklarıyla yürütülüyor."></p>
+      <p class="lede" data-en="I am the founder of RACLAB, the laboratory where much of this work takes place. Detailed information about RACLAB is on its own website, <a href='https://raclab.org' target='_blank' rel='noopener'>raclab.org</a>." data-tr="Bu çalışmaların büyük bölümünün yürütüldüğü RACLAB’ın kurucusuyum. RACLAB ile ilgili ayrıntılı bilgiler laboratuvarın kendi web sayfasında yer alıyor: <a href='https://raclab.org' target='_blank' rel='noopener'>raclab.org</a>."></p>
     </div>
     <img class="portrait" src="photo.jpg" alt="Akif Durdu" onerror="this.remove()">
   </header>
@@ -175,7 +176,7 @@ summary{cursor:pointer;font-family:var(--sans);font-size:.9rem;color:var(--acc);
     <h2 data-en="Projects" data-tr="Projeler"></h2>
     <p class="note" data-en="Industry-funded R&amp;D projects, newest first. “Ongoing” means the project was still running when the CV was written." data-tr="Sanayi destekli Ar-Ge projeleri, yeniden eskiye. “Devam ediyor” ifadesi, özgeçmiş hazırlandığında projenin sürdüğünü gösterir."></p>
     <div id="projlist"></div>
-    <h3 data-en="Academic research project" data-tr="Akademik araştırma projesi"></h3>
+    <h3 data-en="Academic research projects" data-tr="Akademik araştırma projeleri"></h3>
     <div id="resproj"></div>
     <h3 data-en="Student projects" data-tr="Öğrenci projeleri"></h3>
     <div id="studproj"></div>
@@ -260,7 +261,7 @@ $('indices').innerHTML=b(
 
 /* ---------- research ---------- */
 const INT=[
- ['Autonomous systems','Otonom sistemler','UAVs and unmanned ground vehicles; path and motion planning; localization and navigation without GPS; SLAM and visual SLAM; sensor fusion and extended Kalman filtering; swarm systems; ROS; mobile and cognitive robotics.','İHA’lar ve insansız kara araçları; yol ve hareket planlama; GPS’siz konumlama ve seyrüsefer; SLAM ve görsel SLAM; sensör füzyonu ve genişletilmiş Kalman filtresi; sürü sistemleri; ROS; mobil ve bilişsel robotik.'],
+ ['Autonomous systems','Otonom sistemler','UAVs, unmanned ground vehicles and underwater vehicles; path and motion planning; localization and navigation without GPS; SLAM and visual SLAM; sensor fusion and extended Kalman filtering; swarm systems; ROS; mobile and cognitive robotics.','İHA’lar, insansız kara araçları ve sualtı araçları; yol ve hareket planlama; GPS’siz konumlama ve seyrüsefer; SLAM ve görsel SLAM; sensör füzyonu ve genişletilmiş Kalman filtresi; sürü sistemleri; ROS; mobil ve bilişsel robotik.'],
  ['Intelligent transportation','Akıllı ulaşım','Intelligent traffic signal control, decision support and fleet management.','Akıllı trafik sinyal kontrolü, karar destek ve filo yönetimi.'],
  ['Methods','Yöntemler','Artificial intelligence and deep learning; control theory, intelligent and nonlinear control; image processing; PLC programming; human–robot interaction (the subject of my PhD thesis).','Yapay zekâ ve derin öğrenme; kontrol teorisi, akıllı ve doğrusal olmayan kontrol; görüntü işleme; PLC programlama; insan–robot etkileşimi (doktora tezimin konusu).']
 ];
@@ -269,6 +270,7 @@ $('interests').innerHTML=INT.map(i=>`<div><dt>${b(i[0],i[1])}</dt><dd>${b(i[2],i
 /* ---------- news ----------
    Add items at the top. d: "YYYY-MM" or "YYYY"; en/tr: text; link (optional). */
 const NEWS=[
+ {d:'2026',en:'Our TÜBİTAK 1001 project on autonomous navigation for underwater vehicles in GNSS-denied environments, led by Prof. Akif Durdu, will be funded for 18 months starting November 2026. It will develop a hybrid navigation software kit that fuses data from onboard sensors using factor graph optimization and deep learning, so that unmanned underwater vehicles can track their position precisely without GPS.',tr:'Prof. Dr. Akif Durdu’nun yürütücülüğünü üstlendiği, GNSS kısıtlı ortamlarda sualtı araçları için otonom seyrüsefer konulu TÜBİTAK 1001 projemiz, Kasım 2026’dan itibaren 18 ay süreyle desteklenecek. Proje kapsamında, araç üzerindeki sensör verilerini faktör grafik optimizasyonu ve derin öğrenme ile birleştiren hibrit bir seyrüsefer yazılım kiti geliştirilecek; böylece insansız sualtı araçları GPS olmadan da konumunu hassas biçimde takip edebilecek.'},
  {d:'2026-03',en:'A TÜBİTAK 1707 project on an IoT-supported two-way communication and digital twin platform for elevators started with Butkon Lift.',tr:'Butkon Lift ile asansörler için IoT destekli çift yönlü iletişim ve dijital ikiz platformu konulu TÜBİTAK 1707 projesi başladı.'},
  {d:'2026-02',en:'New paper in Scientific Reports on disturbance-tolerant quadrotor control with a hybrid LQR and super-twisting sliding mode approach.',tr:'Scientific Reports’ta hibrit LQR ve süper bükülmeli kayan kipli kontrol ile bozucu etkilere dayanıklı quadrotor kontrolü üzerine yeni makale yayımlandı.',link:'https://doi.org/10.1038/s41598-026-38820-0'},
  {d:'2026-01',en:'Joined Link Robotics as technical consultant.',tr:'Link Robotics’te teknik danışman olarak göreve başladım.'},
@@ -313,7 +315,7 @@ $('industry').innerHTML=IND.map(i=>row(b(i[0],i[1]),i[2],b(i[3][0],i[3][1]))).jo
 
 /* ---------- projects ---------- */
 const span=(a,z)=>b(`${dt(a,'en')} – ${z?dt(z,'en'):PRESENT[0]}`,`${dt(a,'tr')} – ${z?dt(z,'tr'):PRESENT[1]}`);
-const ROLE={adv:['Advisor','Danışman'],coord:['Project coordinator','Proje koordinatörü'],res:['Researcher','Araştırmacı']};
+const ROLE={adv:['Advisor','Danışman'],coord:['Project coordinator','Proje koordinatörü'],res:['Researcher','Araştırmacı'],pi:['Principal investigator','Yürütücü'],ra:['Research advisor','Araştırmacı danışman']};
 /* [start,end,title en,title tr,programme,company,role,budget] */
 const PROJ=[
  ['2026-03',null,'IoT-Supported Smart Two-Way Communication and Digital Twin Platform for Elevators','Asansörler için IoT Destekli Akıllı Çift Yönlü İletişim ve Dijital İkiz Platformu','TÜBİTAK 1707','Butkon Lift','adv'],
@@ -335,8 +337,8 @@ const PROJ=[
  ['2018-04','2020-03','Coordinated Fully Adaptive Signalization Control System (K-TASK)','Koordineli Tam Uyarlanabilir Sinyalizasyon Kontrol Sistemi (K-TASK)','TÜBİTAK 1511','Innomotive','adv']
 ];
 const projRow=p=>row(span(p[0],p[1]),b(p[2],p[3]),b(`${p[4]}; ${p[5]}; ${ROLE[p[6]][0]}`,`${p[4]}; ${p[5]}; ${ROLE[p[6]][1]}`));
-$('projlist').innerHTML=PROJ.map(projRow).join('');
-$('resproj').innerHTML=projRow(['2014-04','2017-04','Investigation of Water Behavior Inside the Well Under Various Pump Operating Conditions in Deep Wells Used for Agricultural Irrigation','Tarımsal Sulamada Kullanılan Derin Kuyularda Çeşitli Pompa Çalışma Koşulları Altında Kuyu İçi Su Davranışının İncelenmesi','TÜBİTAK 1001','','res']).replace('; ;',';');
+$('projlist').innerHTML=row(span('2026-06',null),b('Resonance-Based Sensor Module for Detecting Trains Without Cutting or Electrically Isolating the Rails','Rayları Kesmeden ve Elektriksel İzolasyon Gerektirmeden Tren Varlığını Tespit Eden Rezonans Tabanlı Sensör Modülü'),b('Ministry of Transport and Infrastructure, UDHAM; Innomotive; Research advisor. Project lead: Prof. Bayram Akdemir','Ulaştırma ve Altyapı Bakanlığı UDHAM; Innomotive; Araştırmacı danışman. Yürütücü: Prof. Dr. Bayram Akdemir'))+PROJ.map(projRow).join('');
+$('resproj').innerHTML=row(b('From Nov 2026 (18 months)','Kas 2026’dan itibaren (18 ay)'),b('Development of an Autonomous Navigation Software Kit Based on Multi-Sensor Fusion and Deep Learning-Assisted Factor Graph Optimization in GNSS-Denied Underwater Environments','GNSS Kısıtlı Su Altı Ortamlarında Çoklu Sensör Füzyonu ve Derin Öğrenme Destekli Faktör Grafik Optimizasyonuna Dayalı Otonom Seyrüsefer Yazılım Kitinin Geliştirilmesi'),b('TÜBİTAK 1001; Principal investigator','TÜBİTAK 1001; Yürütücü'))+projRow(['2014-04','2017-04','Investigation of Water Behavior Inside the Well Under Various Pump Operating Conditions in Deep Wells Used for Agricultural Irrigation','Tarımsal Sulamada Kullanılan Derin Kuyularda Çeşitli Pompa Çalışma Koşulları Altında Kuyu İçi Su Davranışının İncelenmesi','TÜBİTAK 1001','','res']).replace('; ;',';');
 $('studproj').innerHTML=row('2014 – 2026',b('60 student projects advised','Danışmanlığı yapılan 60 öğrenci projesi'),b('Under TÜBİTAK 2209-A and 2209-B university student research programmes and the TUSAŞ LIFT-UP programme, several with industry partners. Examples: UAV localization without GPS (TUSAŞ); autonomous cleaning robot (Elfatek); training AI for autonomous vehicles with Eclipse SUMO and Unity 3D (MOSAŞ); civilian industrial anti-drone system (AVCI Defence).','TÜBİTAK 2209-A ve 2209-B üniversite öğrencileri araştırma projeleri destek programları ile TUSAŞ LIFT-UP programı kapsamında; birçoğu sanayi ortaklı. Örnekler: GPS’siz İHA konumlama (TUSAŞ); otonom temizlik robotu (Elfatek); Eclipse SUMO ve Unity 3D entegrasyonuyla otonom araçlar için yapay zekâ eğitimi (MOSAŞ); sivil amaçlı endüstriyel anti-dron sistemi (AVCI Defence).'));
 
 /* ---------- publications ---------- */
@@ -526,9 +528,8 @@ $('members').innerHTML=row('',b('IEEE (Senior Member); IEEE Robotics and Automat
 
 /* ---------- contact ---------- */
 $('contactlist').innerHTML=
- row(b('Email','E-posta'),'<a href="mailto:akifdurdu@gmail.com">akifdurdu@gmail.com</a>','')+
- row(b('Office','Ofis'),b('Konya Technical University, Faculty of Engineering and Natural Sciences, Department of Electrical-Electronics Engineering, Selçuklu, 42075 Konya, Türkiye','Konya Teknik Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi, Elektrik-Elektronik Mühendisliği Bölümü, Selçuklu, 42075 Konya, Türkiye'),'+90 332 205 17 35')+
- row(b('Laboratory','Laboratuvar'),'<a href="https://raclab.org" target="_blank" rel="noopener">raclab.org</a>','')+
+ row(b('Office','Ofis'),b('Konya Technical University, Faculty of Engineering and Natural Sciences, Department of Electrical-Electronics Engineering, Selçuklu, 42075 Konya, Türkiye','Konya Teknik Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi, Elektrik-Elektronik Mühendisliği Bölümü, Selçuklu, 42075 Konya, Türkiye'),'')+
+ row(b('Laboratory','Laboratuvar'),b('Founder of RACLAB. Details about the laboratory are on the RACLAB website: <a href="https://raclab.org" target="_blank" rel="noopener">raclab.org</a>','RACLAB’ın kurucusu. Laboratuvarla ilgili ayrıntılı bilgiler RACLAB web sayfasındadır: <a href="https://raclab.org" target="_blank" rel="noopener">raclab.org</a>'),'')+
  row(b('Profiles','Profiller'),PROF.slice(0,5).map(p=>`<a href="${p[1]}" target="_blank" rel="noopener">${p[0]}</a>`).join(', '),'');
 
 /* ---------- language ---------- */
